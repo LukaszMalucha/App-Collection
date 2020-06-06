@@ -1,0 +1,382 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES    
+------------------------------------------------------------------------------*/
+
+
+body {
+    font-family: 'Play', sans-serif;
+    background-image: url('../img/background.png');
+    background-size: cover;
+
+}
+
+#wrapper {
+    width: 100%;
+
+}
+
+#page-index {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    top: 42px;
+    padding-top: 40px;
+    min-height: 900px;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+.plain-element {
+    margin:0px;
+    padding: 0px;
+}
+
+.warning {
+    color: red;
+}
+
+
+.box {
+   display: flex;
+   align-items:center;
+   margin-bottom: 10px;
+}
+
+#error {
+    color: red;
+    display:none;
+}
+
+.header {
+    height: 40px;
+    margin: 0px;
+}
+
+
+#messageAlert {
+
+    color: red;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0%;
+}
+
+
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.dashboard-cards {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.row-alert {
+    min-height: 72px;
+}
+
+
+.row-title {
+    width: 75%;
+    margin: auto;
+    margin-top: -2%;
+    text-align: left;
+
+}
+
+
+.row-title h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: black;
+}
+
+.row-title p {
+    color: #868e96;
+    font-size: 12px;
+}
+
+
+.row-cards {
+    width: 75%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.row-form {
+    width: 20%;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+.btn-card {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color: transparent;
+    text-align: right;
+    color: white;
+    background-color: #1e3242;
+    font-size: 16px;
+
+}
+
+.btn-card i {
+    font-size: 16px;
+}
+
+.btn-card:hover, .btn-card:active, .btn-card:focus {
+    background-color: #162532;
+    color: white;
+}
+
+.fixed-action-btn {
+   right: 360px;
+   bottom: 80px;
+
+}
+
+
+.btn-floating {
+    background-color: #262a33;
+}
+
+.btn-floating i {
+    font-size: 24px;
+}
+
+.btn-floating:hover,
+.btn-floating:active,
+.btn-floating:focus {
+    background: #323232;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS
+------------------------------------------------------------------------------*/
+
+.card-menu {
+    width: 90%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    margin-bottom: 40px;
+
+}
+
+
+
+
+.card-menu .card-content .card-title {
+    color: #1e3242;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+.card-menu .card-content p {
+    color: black;
+    font-size: 0.8rem;
+    min-height: 35px;
+}
+
+.card .card-content {
+    padding: 16px;
+}
+
+/*------------------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #181818;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    padding: 15px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: #4f84ae;
+    text-decoration: none;
+}
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+
+@media(max-width:1700px) {
+
+    #page-index {
+        padding-top: 0px;
+    }
+
+    .dashboard-cards {
+        width: 95%;
+    }
+
+    .row-title {
+        width: 100%;
+        font-size: 24rem;
+
+    }
+
+    .row-cards {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card-menu {
+        width: 90%;
+    }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+}
+
+
+@media(max-width:1300px) {
+
+    .card-menu .card-content .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-menu .card-content p {
+        min-height: 50px;
+    }
+
+
+    .card .card-content {
+        padding: 12px;
+    }
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1025px) {
+
+
+
+    .row-title {
+        width: 100%;
+        font-size: 1.5rem;
+
+    }
+
+    .row-cards {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .row-form {
+        width: 50%;
+    }
+
+    .btn-submit {
+        width: 60%;
+    }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+    .card-menu {
+        width: 98%;
+    }
+
+    .card-menu .card-content .card-title {
+        font-size: 1.1rem;
+
+    }
+
+}
+
+
+
+
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:767px) {
+
+    .row-title {
+        width:100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    .row-title h3 {
+        font-size: 2.5rem;
+
+    }
+
+
+    .row-cards {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .row-form {
+        width: 80%;
+    }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+
+
+}
