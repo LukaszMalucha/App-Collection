@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Search Engine Meta-->
+  <title>Flask Web Applications</title>
+  <meta name="Description"
+        content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
+  <meta name="KeyWords"
+        content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
+  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  <!-- Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Custom Styles-->
+  <link href="resources/css/custom-styles.css" rel="stylesheet"/>
+  <link href="resources/css/sommeliers.css" rel="stylesheet"/>
+  <link href="resources/css/navbar.css" rel="stylesheet"/>
+  <!-- jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="app">
+
+
+  <!-- TOP NAVBAR -->
+  <nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand company-logo" href="index.html"><img class="company-logo"
+                                                                  src="resources/img/logo-white.png"
+                                                                  alt="Logo"/></a>
+    </div>
+  </nav>
+
+
+  <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+
+  <div id="page-index">
+    <div class="row header">
+      <div id="messageAlert" class="alert alert-message" role="alert">
+
+      </div>
+    </div>
+    <div class="dashboard-cards">
+      <div class="row row-title">
+        <h3>Classification Algorithms</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Machine learning classification problem overview</p>
+      </div>
+      <div class="row row-cards">
+        <div class="card card-transparent">
+          <p>Classification identifies to which of a set of categories a new observation belongs. Classification
+            problem is an example of pattern recognition that predict a probability of a given example belonging
+            to each output class. The output variables are often called labels or categories. There are a number of
+            classification models. Most popular are - Naive Bayes, Random Forest, Logistic Regression and SVR.
+          </p>
+          <p><b>Classification problem examples: </b> &nbsp; &nbsp; Email spam detector • Speech Recognition • DNA
+            Sequence Classification</p>
+          <p><b>Preprocessing steps: </b> &nbsp; &nbsp; One Hot Encoding • Label Encoding • Feature
+            Standardization • Train-Test Split</p>
+          <p><b>Possible issues & pitfalls: </b> &nbsp; &nbsp; Dummy Variable Trap • Overfitting </p>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>Dataset Preprocessing</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> We'll use sklearn library to reshuffle our dataset - we want to avoid
+          any particular samples order that could somehow disrupt machine learning process. Our X,y separated dataset:
+        </p>
+      </div>
+      <div class="row row-cards">
+        <div class="col-md-9 plain-element">
+          <div class="card card-table">
+            X_head 
+          </div>
+        </div>
+        <div class="col-md-3 plain-element">
+          <div class="card card-table">
+            y_head 
+          </div>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>Features Standardization</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Standardization is commonly required for machine learning tasks. It
+          helps to avoid weighting imbalances among features. We'll use StandardScaler from sklearn library:</p>
+      </div>
+      <div class="row row-cards">
+        <div class="col-md-12 plain-element">
+          <div class="card card-table">
+             X_transformed_df 
+          </div>
+        </div>
+      </div>
+      <div class="row row-title">
+        <div class="box">
+          <h3>Train-Test Split</h3>
+          <form  method="GET" enctype="multipart/form-data">
+            <button type="Download" class="btn button-inline">Download Code</button>
+          </form>
+        </div>
+        <p>&nbsp;<i class="fab fa-python"> </i> We'll use 80% of a dataset to train our machine learning model. Other
+          20% we'll use to measure it's performance. With use of sklearn.model_selection library:</p>
+      </div>
+      <div class="row row-cards">
+        <div class="card card-transparent">
+          <p>X_train records: <b>X_train_len</b></p>
+          <p>X_test records: &nbsp; <b>X_test_len</b></p>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>ML Algorithm Selection</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> We'll run a quick performance test of various classification algorithms:
+        </p>
+      </div>
+      <div class="row row-cards">
+        <div class="col-md-2 plain-element">
+          <h6> Logistic Regression</h6>
+          <img src="/static/img/sommeliers/LR.gif" class="img-responsive plot"/>
+        </div>
+        <div class="col-md-2 plain-element">
+          <h6> SVM</h6>
+          <img src="/static/img/sommeliers/KSVM.gif" class="img-responsive plot"/>
+        </div>
+        <div class="col-md-2 plain-element">
+          <h6> Naive Bayes</h6>
+          <img src="/static/img/sommeliers/NB.gif" class="img-responsive plot"/>
+        </div>
+        <div class="col-md-2 plain-element">
+          <h6> Random Forest</h6>
+          <img src="/static/img/sommeliers/RFC.gif" class="img-responsive plot"/>
+        </div>
+        <div class="col-md-2 plain-element">
+          <h6> GT Boosting</h6>
+          <img src="/static/img/sommeliers/GTB.gif" class="img-responsive plot"/>
+        </div>
+        <div class="col-md-2 plain-element">
+          <h6>AdaBoost</h6>
+          <img src="/static/img/sommeliers/AB.gif" class="img-responsive plot"/>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>Algorithms Initial Performance</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> To measure initial performance, we'll fit raw models to our training set
+          (without specifying any parameters) using k-Fold Cross Validation technique:
+        </p>
+      </div>
+      <div class="row row-cards">
+        <div class="col-md-12 plain-element">
+          <div class="card card-table">
+             accuracies_initial | safe 
+          </div>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>Conclusion</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Classification algorithm choice
+        </p>
+      </div>
+      <div class="row row-cards">
+        <div class="card card-transparent">
+          <p>Predicting all 6 classes it's not an easy task and we can see that Naive Bayes and AdaBoost
+            didn't handle it well. Other bottom performers were Logistic Regression and KNN. Standard
+            deviation was under 5% (except NB - 15%!). Let's keep only 4 top performance for now and try to tune
+            some hyperparameters.</p>
+        </div>
+      </div>
+      <div class="row row-cards">
+        <a href=" url_for('sommeliers.classifier_fit') " class="btn btn-navigation"
+           id="navigation"><span>Parameters Tuning <i class="far fa-arrow-alt-circle-right"></i></span></a>
+
+      </div>
+
+      <div class="row row-cards"></div>
+    </div>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-menu">
+        <i class="large material-icons">more_horiz</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Homepage"
+               href=" url_for('dashboard') "><i class="material-icons">exit_to_app</i></a></li>
+        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Dataset Summary"
+               href=" url_for('sommeliers.summary') "><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Build Classifier"
+               href=" url_for('sommeliers.classifier_build') "><i class="material-icons">build</i></a></li>
+        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Fit Classifier"
+               href=" url_for('sommeliers.classifier_fit') "><i class="material-icons">check</i></a></li>
+        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="AI Sommeliers"
+               href=" url_for('sommeliers.sommeliers') "><i class="material-icons">local_bar</i></a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+    Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
+</div>
+
+
+<!-- Bootstrap Js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- Custom Js -->
+<script src="resources/js/custom-scripts.js"></script>
+<script src="resources/js/sommeliers.js"></script>
+
+</body>
+
+</html>
