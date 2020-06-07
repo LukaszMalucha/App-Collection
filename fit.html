@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Search Engine Meta-->
+  <title>Flask Web Applications</title>
+  <meta name="Description"
+        content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
+  <meta name="KeyWords"
+        content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
+  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  <!-- Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Custom Styles-->
+  <link href="resources/css/custom-styles.css" rel="stylesheet"/>
+  <link href="resources/css/sommeliers.css" rel="stylesheet"/>
+  <link href="resources/css/navbar.css" rel="stylesheet"/>
+  <!-- jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="app">
+
+
+  <!-- TOP NAVBAR -->
+  <nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand company-logo" href="index.html"><img class="company-logo"
+                                                                  src="resources/img/logo-white.png"
+                                                                  alt="Logo"/></a>
+    </div>
+  </nav>
+
+
+  <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+
+  <div v-if="X_head" id="page-index">
+
+    <div class="dashboard-cards">
+      <div class="row row-title">
+        <h3>Hyperparameters Tuning</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> In order to choose optimal parameters for each algorithm, we'll use <b>GridSearchCV</b>
+          from <b>sklearn</b> library:</p>
+      </div>
+      <div class="row row-cards">
+        <div class="card card-transparent">
+          <p><b>Optimal parameters for Linear SVM: </b> {'C': 1, 'kernel' : 'linear'}</p>
+          <p><b>Optimal parameters for Kernel SVM: </b> {'C': 10, 'gamma': 1.0, 'kernel': 'rbf'}</p>
+          <p><b>Optimal parameters for RandomForest: </b> {'criterion': 'entropy', 'min_samples_leaf': 3, max_depth':
+            110, 'max_features': 3, 'min_samples_split': 5, 'n_estimators': 200}</p>
+          <p><b>Optimal parameters for Gradient Tree Boosting: </b> {'learning_rate': 0.1, max_features = 0.1,
+            'n_estimators': 450}</p>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>Algorithms Performance after Tuning</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Again, we'll measure model performance using <b>k-Fold Cross
+          Validation</b> technique. Additionally we'll try out <b>Vote Classifier</b> built with all four other
+          classifiers: </p>
+      </div>
+      <div class="row row-cards">
+        <div class="col-md-12 plain-element">
+          <div class="card card-table">
+            <table>
+              <thead>
+              <tr>
+                <th class="center">Algorithm</th>
+                <th class="center">Accuracy Mean</th>
+                <th class="center">Accuracy Std.</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr v-for="(row, index) in accuracies_tune" :key="index">
+                <td class="center">{{row.algorithm}}</td>
+                <td class="center">{{row.accuracy_mean}}</td>
+                <td class="center">{{row.accuracy_std}}</td>
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row row-title">
+        <div class="box">
+          <h3>Predicting Test Set Values</h3>
+          <a class="btn button-inline" href="resources/datasets/classifier_test.py" download>Download Code</a>
+        </div>
+        <p>&nbsp;<i class="fab fa-python"> </i> Let's see how our models are performing on a test set (y_test): </p>
+      </div>
+      <div class="row row-cards">
+        <div class="col-md-12 plain-element">
+          <div class="card card-table">
+            <table>
+              <thead>
+              <tr>
+                <th class="center">Algorithm</th>
+                <th class="center">Accuracy Mean</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr v-for="(row, index) in accuracies_tune" :key="index">
+                <td class="center">{{row.algorithm}}</td>
+                <td class="center">{{row.accuracy_mean}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row row-title">
+        <h3>Conclusion</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Final thoughts regarding algorithms tuning process
+        </p>
+      </div>
+      <div class="row row-cards">
+        <div class="card card-transparent">
+          <p>With given data samples avg <b>70%</b> accuracy is the highest as we can reach. There is a high probability
+            that
+            with more data we could predict quality with better precision. Generally, ensemble models (<b>RF</b>,
+            <b>GTB</b>)
+            outperform other algorithms in this task. Now, let us meet our <b>Artificial Sommeliers</b> in person by
+            clicking button below:</p>
+        </div>
+      </div>
+      <div class="row row-cards">
+        <a href="{{ url_for('sommeliers.sommeliers') }}" class="btn btn-navigation"
+           id="navigation"><span>A.I. Sommeliers <i class="far fa-arrow-alt-circle-right"></i></span></a>
+      </div>
+
+      <div class="row row-cards"></div>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="footer">
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+    Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
+</div>
+
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- Custom Js -->
+<script src="resources/js/custom-scripts.js"></script>
+<script src="resources/js/sommeliers.js"></script>
+
+</body>
+
+</html>

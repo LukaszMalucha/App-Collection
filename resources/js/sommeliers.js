@@ -61,6 +61,13 @@ new Vue({
       columns: null,
       counter_dict: null,
       qualityData: null,
+      X_head: null,
+      y_head: null,
+      X_transformed_df: null,
+      X_train_len: null,
+      X_test_len: null,
+      accuracies_initial: null,
+      accuracies_tune: null,
       statistics: ["mean", "std", "min", "25%", "50%", "75%", "max"]
     }
   },
@@ -73,12 +80,39 @@ new Vue({
                 this.dataset_head = response.data.dataset_head;
                 this.counter_dict = response.data.counter_dict
                 this.fillQualityChart();
-                window.console.log(response.data.counter_dict)
             }
             }).catch(error => {
                 window.console.log(error);
               })
 
+    },
+    classifierBuild() {
+          const url = "http://127.0.0.1:8000/sommeliers/build";
+          axios.get(url).then(response => {
+            if (response.data) {
+                this.X_head = response.data.X_head;
+                this.y_head = response.data.y_head;
+                this.X_transformed_df = response.data.X_transformed_df
+                this.X_train_len = response.data.X_train_len;
+                this.X_test_len = response.data.X_test_len;
+                this.accuracies_initial = response.data.accuracies_initial;
+                window.console.log(response.data.accuracies_initial)
+            }
+            }).catch(error => {
+                window.console.log(error);
+              })
+
+    },
+    classifierFit() {
+          const url = "http://127.0.0.1:8000/sommeliers/fit";
+          axios.get(url).then(response => {
+            if (response.data) {
+                this.accuracies_tune = response.data.accuracies_tune;
+                this.accuracies_test = response.data.accuracies_test;
+            }
+            }).catch(error => {
+                window.console.log(error);
+              })
     },
     fillQualityChart() {
       var dataset = this.counter_dict
@@ -96,6 +130,8 @@ new Vue({
     },
   },
   created () {
-      this.processData()
+      this.processData();
+      this.classifierBuild();
+      this.classifierFit();
   }
 })

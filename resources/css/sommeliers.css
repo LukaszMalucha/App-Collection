@@ -76,7 +76,7 @@ progress::-moz-progress-bar {
 
 
 .row-title {
-    width: 70%;
+    width: 100%;
     margin: auto;
     text-align: left;
     margin-top: -2%;
@@ -85,7 +85,7 @@ progress::-moz-progress-bar {
 
 
 .row-title h3 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     color: white;
 }
@@ -96,9 +96,9 @@ progress::-moz-progress-bar {
 }
 
 .row-cards {
-    width: 70%;
+    width: 100%;
     text-align: center;
-    padding: 0% 0% 4% 0%;
+    padding: 0%;
 }
 
 
@@ -133,7 +133,7 @@ progress::-moz-progress-bar {
 .card-table {
     background: #373d49;
     border-radius: 5px;
-    width: 98%;
+    width: 100%;
     margin: auto;
     margin-bottom: 20px;
     border: 1px solid #515663;
@@ -143,11 +143,11 @@ progress::-moz-progress-bar {
 .card-plot {
     background: #373d49;
     border-radius: 5px;
-    width: 96%;
+    width: 100%;
     margin: auto;
     margin-bottom: 20px;
     border: 1px solid #515663;
-    min-height: 320px;
+    min-height: 352px;
 }
 
 
@@ -312,8 +312,8 @@ progress::-moz-progress-bar {
 
 
 .button-inline {
-    width: 100%;
-    margin-left: 10%;
+    width: max-content;
+    margin-left: 1%;
     font-size: 0.6rem;
     height: 18px;
     line-height: 18px;
@@ -456,16 +456,7 @@ input[type="number"]:not(.browser-default) {
 
 
 @media(max-width:1700px) {
-    .row-cards,
-    .row-title {
-        width: 95%;
-    }
 
-    .fixed-action-btn {
-       right: 80px;
-        top: 90px;
-
-    }
 }
 
 

@@ -18,7 +18,7 @@ body {
     position: relative;
     top: 42px;
     padding-top: 40px;
-    min-height: 900px;
+
 
 }
 
@@ -45,8 +45,7 @@ body {
 
 .box {
    display: flex;
-   align-items:center;
-   margin-bottom: 10px;
+
 }
 
 #error {
@@ -75,7 +74,7 @@ body {
 ------------------------------------------------------------------------------*/
 
 .dashboard-cards {
-    width: 90%;
+    width: 70%;
     margin: auto;
 }
 
@@ -87,7 +86,7 @@ body {
 
 
 .row-title {
-    width: 75%;
+    width: 100%;
     margin: auto;
     margin-top: -2%;
     text-align: left;
@@ -96,7 +95,7 @@ body {
 
 
 .row-title h3 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 800;
     color: black;
 }
@@ -108,7 +107,7 @@ body {
 
 
 .row-cards {
-    width: 75%;
+    width: 100%;
     text-align: center;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -255,7 +254,7 @@ body {
 
     .row-title {
         width: 100%;
-        font-size: 24rem;
+        font-size: 2rem;
 
     }
 
