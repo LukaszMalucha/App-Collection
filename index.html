@@ -2,209 +2,198 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Search Engine Meta-->
-    <title>Flask Web Applications</title>
-    <meta name="Description" content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
-    <meta name="KeyWords" content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
-    <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
-    <!-- Material Icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Materialize-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- FontAwesome Styles-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <!-- Custom Styles-->
-    <link href="resources/css/custom-styles.css" rel="stylesheet"/>
-    <link href="resources/css/navbar.css" rel="stylesheet"/>
-    <!-- jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Search Engine Meta-->
+  <title>Flask Web Applications</title>
+  <meta name="Description"
+        content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
+  <meta name="KeyWords"
+        content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
+  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  <!-- Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Custom Styles-->
+  <link href="resources/css/custom-styles.css" rel="stylesheet"/>
+  <link href="resources/css/navbar.css" rel="stylesheet"/>
+  <!-- jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 </head>
 
 <body>
 <!-- WRAPPER -->
-<div id="wrapper">
 
 
-    <!-- TOP NAVBAR -->
-    <nav class="navbar navbar-default top-navbar" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand company-logo" href="index.html"><img class="company-logo"
-                                                                                        src="resources/img/logo-white.png"
-                                                                                        alt="Logo"/></a>
-        </div>
-    </nav>
+<!-- TOP NAVBAR -->
+<nav class="navbar navbar-default top-navbar" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand company-logo" href="index.html"><img class="company-logo"
+                                                                src="resources/img/logo-white.png"
+                                                                alt="Logo"/></a>
+  </div>
+</nav>
 
 
+<!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
 
-    <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
 
+<div id="page-index">
+  <div class="row header">
+    <div id="messageAlert" class="alert alert-message" role="alert">
 
-    <div id="page-index">
-        <div class="row header">
-            <div id="messageAlert" class="alert alert-message" role="alert">
-
-            </div>
-        </div>
-      <div class="dashboard-cards">
+    </div>
+  </div>
+  <div class="dashboard-cards">
     <div class="row row-title">
-        <h3>Image Classifiers</h3>
-        <p><i class="fab fa-python"></i>&nbsp; Various approaches to image classification problem</p>
+      <h3>Image Classifiers</h3>
+      <p><i class="fab fa-python"></i>&nbsp; Various approaches to image classification problem</p>
     </div>
     <div class="row row-cards">
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/cat_dog.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Cat vs. Dog Classifier</span>
-                    <p>Image classifier CNN trained to distinct between cats and dogs images.</p>
-                </div>
-                <a target="_blank" href="http://www.septellar.com/" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/cat_dog.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Cat vs. Dog Classifier</span>
+            <p>Image classifier CNN trained to distinct between cats and dogs images.</p>
+          </div>
+          <a target="_blank" href="http://www.septellar.com/" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/digits.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Digit Identifier</span>
-                    <p>Hand-Written Digit Recognition CNN based on MNIST Dataset.</p>
-                </div>
-                <a href="{{ url_for('digit_identifier') }}" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/digits.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Digit Identifier</span>
+            <p>Hand-Written Digit Recognition CNN based on MNIST Dataset.</p>
+          </div>
+          <a href="{{ url_for('digit_identifier') }}" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/bepartisan.png">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Rep or Dem?</span>
-                    <p>Can AI accurately identify your political view based on an image?</p>
-                </div>
-                <a target='_blank' href="http://www.bepartisan.com/" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/bepartisan.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Rep or Dem?</span>
+            <p>Can AI accurately identify your political view based on an image?</p>
+          </div>
+          <a target='_blank' href="http://www.bepartisan.com/" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
+      </div>
     </div>
     <div class="row row-title">
-        <h3>Artificial Intelligence</h3>
-        <p><i class="fab fa-python"></i>&nbsp; Various machine learning & reinforcement learning concepts</p>
+      <h3>Artificial Intelligence</h3>
+      <p><i class="fab fa-python"></i>&nbsp; Various machine learning & reinforcement learning concepts</p>
     </div>
     <div class="row row-cards">
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/mars.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Mars Pathfinder AI</span>
-                    <p>Practical application of Q-Learning algorithm on pathfinding problem.</p>
-                </div>
-                <a href="{{url_for('pathfinder_ai" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/mars.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Mars Pathfinder AI</span>
+            <p>Practical application of Q-Learning algorithm on pathfinding problem.</p>
+          </div>
+          <a href="{{url_for('pathfinder_ai" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/sentiment.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Tweets Sentiment</span>
-                    <p>Pick most interesting subject and guide your data towards LSTM</p>
-                </div>
-                <a target='_blank' href="https://twitterati.herokuapp.com/" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/sentiment.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Tweets Sentiment</span>
+            <p>Pick most interesting subject and guide your data towards LSTM</p>
+          </div>
+          <a target='_blank' href="https://twitterati.herokuapp.com/" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/realtor.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Home Value Estimator</span>
-                    <p>Machine learning approach to property valuation in Ireland  </p>
-                </div>
-                <a target="_blank" href="http://www.quantproperties.com/" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/realtor.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Home Value Estimator</span>
+            <p>Machine learning approach to property valuation in Ireland </p>
+          </div>
+          <a target="_blank" href="http://www.quantproperties.com/" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/wine.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Artificial Sommelier</span>
-                    <p>Can A.I. accurately predict red wine quality rating?</p>
-                </div>
-                <a href="{{ url_for('sommeliers.summary') }}" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/wine.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Artificial Sommelier</span>
+            <p>Can A.I. accurately predict red wine quality rating?</p>
+          </div>
+          <a href="{{ url_for('sommeliers.summary') }}" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
+      </div>
     </div>
     <div class="row row-title">
-        <h3>Blockchain</h3>
-        <p><i class="fab fa-python"></i>&nbsp; Blockchain & cryptocurrency projects</p>
+      <h3>Blockchain</h3>
+      <p><i class="fab fa-python"></i>&nbsp; Blockchain & cryptocurrency projects</p>
     </div>
     <div class="row row-cards">
-        <div class="col-md-3 col-sm-4">
-            <div class="card card-menu">
-                <div class="card-image">
-                    <img src="resources/img/main/blockchain.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title">Blockchain Simulation</span>
-                    <p>Get your head around blockchain basic concepts. Happy mining!</p>
-                </div>
-                <a href="https://www.neomvp.com/" class="btn btn-card"><span>Continue <i
-                        class="far fa-arrow-alt-circle-right"></i></span></a>
-            </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="card card-menu">
+          <div class="card-image">
+            <img src="resources/img/main/blockchain.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Blockchain Simulation</span>
+            <p>Get your head around blockchain basic concepts. Happy mining!</p>
+          </div>
+          <a href="https://www.neomvp.com/" class="btn btn-card"><span>Continue <i
+                  class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
+      </div>
     </div>
     <div class="row row-cards">
     </div>
     <div class="row row-cards"></div>
+  </div>
+
 </div>
 
-    </div>
-</div>
 
 <div class="footer">
-    <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
-        Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+    Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
 </div>
-
-
-<!-- Bootstrap Js -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
 
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <!-- Custom Js -->
 <script src="resources/js/custom-scripts.js"></script>
-
-
 
 
 </body>

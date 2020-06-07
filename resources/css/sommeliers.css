@@ -118,7 +118,7 @@ progress::-moz-progress-bar {
     margin: auto;
     color: white;
     text-shadow: 2px 2px #313641;
-
+    padding-right: 12px;
 }
 
 .card-transparent a {
@@ -143,18 +143,18 @@ progress::-moz-progress-bar {
 .card-plot {
     background: #373d49;
     border-radius: 5px;
-    width: 98%;
+    width: 96%;
     margin: auto;
     margin-bottom: 20px;
     border: 1px solid #515663;
-    min-height: 340px;
+    min-height: 320px;
 }
 
 
 .card-data {
     background: #373d49;
     border-radius: 5px;
-    width: 80%;
+    width: 96%;
     border: 1px solid #515663;
     min-height: 220px;
     text-shadow: 2px 2px #313641;
@@ -389,7 +389,7 @@ td {
     color: white;
     text-align: center;
     font-size: 0.7rem;
-    padding: 5px;
+    padding: 10px 5px;
 }
 
 

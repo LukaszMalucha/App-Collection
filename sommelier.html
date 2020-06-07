@@ -16,9 +16,6 @@
   <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
   <!-- Material Icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Materialize-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- FontAwesome Styles-->
@@ -52,159 +49,230 @@
   <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
 
 
-  <div id="page-index">
+  <div v-if="dataset_head" id="page-index">
     <div class="row header">
       <div id="messageAlert" class="alert alert-message" role="alert">
 
       </div>
     </div>
-    <div class="dashboard-cards">
-      <div class="row row-title">
-        <h3>Classification Algorithms</h3>
-        <p>&nbsp;<i class="fab fa-python"> </i> Machine learning classification problem overview</p>
-      </div>
-      <div class="row row-cards">
+<div class="dashboard-cards">
+    <div class="row row-title">
+        <h3>Red Wine Classification Problem</h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Dataset source & problem description</p>
+    </div>
+    <div class="row row-cards">
         <div class="card card-transparent">
-          <p>Classification identifies to which of a set of categories a new observation belongs. Classification
-            problem is an example of pattern recognition that predict a probability of a given example belonging
-            to each output class. The output variables are often called labels or categories. There are a number of
-            classification models. Most popular are - Naive Bayes, Random Forest, Logistic Regression and SVR.
-          </p>
-          <p><b>Classification problem examples: </b> &nbsp; &nbsp; Email spam detector • Speech Recognition • DNA
-            Sequence Classification</p>
-          <p><b>Preprocessing steps: </b> &nbsp; &nbsp; One Hot Encoding • Label Encoding • Feature
-            Standardization • Train-Test Split</p>
-          <p><b>Possible issues & pitfalls: </b> &nbsp; &nbsp; Dummy Variable Trap • Overfitting </p>
+            <p>Dataset includes red "Vinho Verde" wine samples from the north of Portugal. Observations
+                involve physico-chemical properties as well as sample rank given by the professional tasters
+                (the "quality"). How wine market values each wine
+                usually depends on those quality ratings. Gathered opinions of experienced sommeliers is
+                usually becoming final judgement of wine's quality. But is it possible, with a series of
+                laboratory tests, to predict which quality rating
+                will be given to a wine? Could wine tester judgment be somehow related to wine chemical
+                proportions? With given dataset we'll try to create artificial sommelier that based on
+                physico-chemical features can predict which quality
+                rating will be given.
+            </p>
+            <p>No. of Rows: <b>1599</b>&nbsp;&nbsp;•&nbsp;&nbsp;No. of Columns: <b>12</b></p>
+            <p></p>
+            <a target="_blank" href="https://archive.ics.uci.edu/ml/datasets/wine+quality">UC Irvine Machine Learning
+                Repository - Wine Quality Data Set</a>
         </div>
-      </div>
-      <div class="row row-title">
-        <h3>Dataset Preprocessing</h3>
-        <p>&nbsp;<i class="fab fa-python"> </i> We'll use sklearn library to reshuffle our dataset - we want to avoid
-          any particular samples order that could somehow disrupt machine learning process. Our X,y separated dataset:
-        </p>
-      </div>
-      <div class="row row-cards">
-        <div class="col-md-9 plain-element">
-          <div class="card card-table">
-            X_head 
-          </div>
-        </div>
-        <div class="col-md-3 plain-element">
-          <div class="card card-table">
-            y_head 
-          </div>
-        </div>
-      </div>
-      <div class="row row-title">
-        <h3>Features Standardization</h3>
-        <p>&nbsp;<i class="fab fa-python"> </i> Standardization is commonly required for machine learning tasks. It
-          helps to avoid weighting imbalances among features. We'll use StandardScaler from sklearn library:</p>
-      </div>
-      <div class="row row-cards">
-        <div class="col-md-12 plain-element">
-          <div class="card card-table">
-             X_transformed_df 
-          </div>
-        </div>
-      </div>
-      <div class="row row-title">
+    </div>
+    <div class="row row-title">
         <div class="box">
-          <h3>Train-Test Split</h3>
-          <form  method="GET" enctype="multipart/form-data">
+        <h3>Dataset Overview</h3>
+        <form action="XX url_for('sommeliers.download_code', code_name='dataset_describe')  XX" method="GET" id="rate-form"
+              enctype="multipart/form-data">
             <button type="Download" class="btn button-inline">Download Code</button>
-          </form>
-        </div>
-        <p>&nbsp;<i class="fab fa-python"> </i> We'll use 80% of a dataset to train our machine learning model. Other
-          20% we'll use to measure it's performance. With use of sklearn.model_selection library:</p>
-      </div>
-      <div class="row row-cards">
-        <div class="card card-transparent">
-          <p>X_train records: <b>X_train_len</b></p>
-          <p>X_test records: &nbsp; <b>X_test_len</b></p>
-        </div>
-      </div>
-      <div class="row row-title">
-        <h3>ML Algorithm Selection</h3>
-        <p>&nbsp;<i class="fab fa-python"> </i> We'll run a quick performance test of various classification algorithms:
-        </p>
-      </div>
-      <div class="row row-cards">
-        <div class="col-md-2 plain-element">
-          <h6> Logistic Regression</h6>
-          <img src="/static/img/sommeliers/LR.gif" class="img-responsive plot"/>
-        </div>
-        <div class="col-md-2 plain-element">
-          <h6> SVM</h6>
-          <img src="/static/img/sommeliers/KSVM.gif" class="img-responsive plot"/>
-        </div>
-        <div class="col-md-2 plain-element">
-          <h6> Naive Bayes</h6>
-          <img src="/static/img/sommeliers/NB.gif" class="img-responsive plot"/>
-        </div>
-        <div class="col-md-2 plain-element">
-          <h6> Random Forest</h6>
-          <img src="/static/img/sommeliers/RFC.gif" class="img-responsive plot"/>
-        </div>
-        <div class="col-md-2 plain-element">
-          <h6> GT Boosting</h6>
-          <img src="/static/img/sommeliers/GTB.gif" class="img-responsive plot"/>
-        </div>
-        <div class="col-md-2 plain-element">
-          <h6>AdaBoost</h6>
-          <img src="/static/img/sommeliers/AB.gif" class="img-responsive plot"/>
-        </div>
-      </div>
-      <div class="row row-title">
-        <h3>Algorithms Initial Performance</h3>
-        <p>&nbsp;<i class="fab fa-python"> </i> To measure initial performance, we'll fit raw models to our training set
-          (without specifying any parameters) using k-Fold Cross Validation technique:
-        </p>
-      </div>
-      <div class="row row-cards">
-        <div class="col-md-12 plain-element">
-          <div class="card card-table">
-             accuracies_initial | safe 
-          </div>
-        </div>
-      </div>
-      <div class="row row-title">
-        <h3>Conclusion</h3>
-        <p>&nbsp;<i class="fab fa-python"> </i> Classification algorithm choice
-        </p>
-      </div>
-      <div class="row row-cards">
-        <div class="card card-transparent">
-          <p>Predicting all 6 classes it's not an easy task and we can see that Naive Bayes and AdaBoost
-            didn't handle it well. Other bottom performers were Logistic Regression and KNN. Standard
-            deviation was under 5% (except NB - 15%!). Let's keep only 4 top performance for now and try to tune
-            some hyperparameters.</p>
-        </div>
-      </div>
-      <div class="row row-cards">
-        <a href=" url_for('sommeliers.classifier_fit') " class="btn btn-navigation"
-           id="navigation"><span>Parameters Tuning <i class="far fa-arrow-alt-circle-right"></i></span></a>
+        </form>
 
-      </div>
+        </div>
+        <p>&nbsp;<i class="fab fa-python"> </i> Vizualizing first 10 rows of a dataset with Pandas <b>dataset.head()</b>
+        </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col m12 plain-element">
+            <div class="card card-table">
+                <table>
+                   <thead>
+                      <tr>
+                        <th>fixed acidity</th>
+                        <th class="center">volatile acidity</th>
+                        <th class="center">citric acid</th>
+                        <th class="center">residual sugar</th>
+                        <th class="center">chlorides</th>
+                        <th class="center">free sulfur dioxide</th>
+                        <th class="center">total sulfur dioxide</th>
+                        <th class="center">density</th>
+                        <th class="center">pH</th>
+                        <th class="center">sulphates</th>
+                        <th class="center">alcohol</th>
+                        <th class="center">quality</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                          <tr v-for="(row, index) in dataset_head" :key="index">
+                            <td class="center">{{row["fixed acidity"]}} </td>
+                            <td class="center">{{row["volatile acidity"]}} </td>
+                            <td class="center">{{row["citric acid"]}} </td>
+                            <td class="center">{{row["residual sugar"]}} </td>
+                            <td class="center">{{row["chlorides"]}} </td>
+                            <td class="center">{{row["free sulfur dioxide"]}} </td>
+                            <td class="center">{{row["total sulfur dioxide"]}} </td>
+                            <td class="center">{{row.density}} </td>
+                            <td class="center">{{row.pH}} </td>
+                            <td class="center">{{row.sulphates}} </td>
+                            <td class="center">{{row.alcohol}} </td>
+                            <td class="center">{{row.quality}} </td>
+                          </tr>
 
-      <div class="row row-cards"></div>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-menu">
-        <i class="large material-icons">more_horiz</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Homepage"
-               href=" url_for('dashboard') "><i class="material-icons">exit_to_app</i></a></li>
-        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Dataset Summary"
-               href=" url_for('sommeliers.summary') "><i class="material-icons">insert_chart</i></a></li>
-        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Build Classifier"
-               href=" url_for('sommeliers.classifier_build') "><i class="material-icons">build</i></a></li>
-        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="Fit Classifier"
-               href=" url_for('sommeliers.classifier_fit') "><i class="material-icons">check</i></a></li>
-        <li><a class="btn-floating tooltipped" data-position="top" data-tooltip="AI Sommeliers"
-               href=" url_for('sommeliers.sommeliers') "><i class="material-icons">local_bar</i></a></li>
-      </ul>
+    <div class="row row-title">
+        <h3>Dataset Statistics </h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Generating descriptive statistics to summarize central tendency,
+            dispersion and shape of a dataset’s distribution with pandas <b>dataset.describe()</b>
+        </p>
     </div>
+    <div class="row row-cards">
+        <div class="col m12 plain-element">
+            <div class="card card-table">
+                <table>
+                   <thead>
+                      <tr>
+                        <th> </th>
+                        <th>fixed acidity</th>
+                        <th class="center">volatile acidity</th>
+                        <th class="center">citric acid</th>
+                        <th class="center">residual sugar</th>
+                        <th class="center">chlorides</th>
+                        <th class="center">free sulfur dioxide</th>
+                        <th class="center">total sulfur dioxide</th>
+                        <th class="center">density</th>
+                        <th class="center">pH</th>
+                        <th class="center">sulphates</th>
+                        <th class="center">alcohol</th>
+                        <th class="center">quality</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                          <tr v-for="(row, index) in describe" :key="index">
+                            <td class="center">{{ statistics[index]}} </td>
+                            <td class="center">{{row["fixed acidity"]}} </td>
+                            <td class="center">{{row["volatile acidity"]}} </td>
+                            <td class="center">{{row["citric acid"]}} </td>
+                            <td class="center">{{row["residual sugar"]}} </td>
+                            <td class="center">{{row["chlorides"]}} </td>
+                            <td class="center">{{row["free sulfur dioxide"]}} </td>
+                            <td class="center">{{row["total sulfur dioxide"]}} </td>
+                            <td class="center">{{row.density}} </td>
+                            <td class="center">{{row.pH}} </td>
+                            <td class="center">{{row.sulphates}} </td>
+                            <td class="center">{{row.alcohol}} </td>
+                            <td class="center">{{row.quality}} </td>
+                          </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row row-title">
+        <h3>Feature Distribution & Correlations </h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Vizualizing feature distribution and correlation in a dataset
+        </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col m6 plain-element">
+            <div class="card card-plot">
+                <quality-chart v-if="qualityData" type="bar" :data="qualityData" ></quality-chart>
+            </div>
+        </div>
+        <div class="col m1 plain-element"></div>
+        <div class="col m5 plain-element">
+            <img src="resources/img/sommeliers/correlations.png" class="img-responsive plot"/>
+        </div>
+    </div>
+    <div class="row row-title">
+        <h3>Dataset Insights </h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> Dataset valuable observations
+        </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col m3 plain-element">
+            <div class="card card-data">
+                <div class="card-content">
+                    <span class="card-title">Observation #1</span>
+                    <br>
+                    <p><b>High disproportion between min & max values of each feature. We might be dealing with
+                        outliers. </b></p>
+                </div>
+            </div>
+        </div>
+        <div class="col m3 plain-element">
+            <div class="card card-data">
+                <div class="card-content">
+                    <span class="card-title">Observation #2</span>
+                    <br>
+                    <p><b>Imbalanced record distribution of quality class. Quality "3" & "8" have both representation
+                        below 20 records. </b></p>
+                </div>
+            </div>
+        </div>
+        <div class="col m3 plain-element">
+            <div class="card card-data">
+                <div class="card-content">
+                    <span class="card-title">Observation #3</span>
+                    <br>
+                    <p><b>Strongest correlation between quality and alcohol, volatile acidity, citric acid, sulphates
+                        features. </b></p>
+                </div>
+            </div>
+        </div>
+        <div class="col m3 plain-element">
+            <div class="card card-data">
+                <div class="card-content">
+                    <span class="card-title">Observation #4</span>
+                    <br>
+                    <p><b>Problem can be seen as an either classification or regression, take on account that quality
+                        grows continuously. </b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-title">
+        <h3>Dataset Trends </h3>
+        <p>&nbsp;<i class="fab fa-python"> </i> As seen on a graphs below for most correlated features we can see
+            strongest upward trend on alcohol graph and clear inverse correlation on volatile acidity graph.
+        </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col m3 plain-element">
+            <img src="resources/img/sommeliers/alcohol.png" class="img-responsive plot"/>
+        </div>
+        <div class="col m3 plain-element">
+            <img src="resources/img/sommeliers/c_acid.png" class="img-responsive plot"/>
+        </div>
+        <div class="col m3 plain-element">
+            <img src="resources/img/sommeliers/sulphates.png" class="img-responsive plot"/>
+        </div>
+        <div class="col m3 plain-element">
+            <img src="resources/img/sommeliers/v_acid.png" class="img-responsive plot"/>
+        </div>
+    </div>
+    <div class="row row-cards">
+          <a href="XX  url_for('sommeliers.classifier_build')  XX" class="btn btn-navigation"
+               id="navigation"><span>Build Algorithm <i class="far fa-arrow-alt-circle-right"></i></span></a>
+    </div>
+    <div class="row row-cards">
+
+    </div>
+</div>
+
 
   </div>
 </div>
@@ -214,11 +282,6 @@
     Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
 </div>
 
-
-<!-- Bootstrap Js -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
 
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
