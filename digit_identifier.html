@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Search Engine Meta-->
+  <title>Flask Web Applications</title>
+  <meta name="Description"
+        content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
+  <meta name="KeyWords"
+        content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
+  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Custom Styles-->
+  <link href="resources/css/custom-styles.css" rel="stylesheet"/>
+  <link href="resources/css/digit-identifier.css" rel="stylesheet"/>
+  <link href="resources/css/navbar.css" rel="stylesheet"/>
+
+
+</head>
+
+<body>
+<!-- WRAPPER -->
+
+
+<!-- TOP NAVBAR -->
+<nav class="navbar navbar-default top-navbar" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand company-logo" href="index.html"><img class="company-logo"
+                                                                src="resources/img/logo-white.png"
+                                                                alt="Logo"/></a>
+  </div>
+</nav>
+
+
+<!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+
+<div id="page-index">
+  <div class="row row-title">
+    <i class="fas fa-pen"></i>&nbsp; &nbsp; Draw some Digit
+  </div>
+  <div class="dashboard-cards">
+    <div class="row row-cards">
+      <div class="col s1 m1"></div>
+      <div class="col s12 m12">
+        <input type="color" class="js-color-picker  color-picker">
+        <input type="range" class="js-line-range" min="1" max="72" value="1">
+        <label class="js-range-value">1</label>Px
+        <canvas class="js-paint  paint-canvas" width="600" height="300"></canvas>
+        <div class="card card-canvas">
+          <button id="clear" class="btn btn-canvas">Clear Canvas</button>
+          <div class="card-image">
+            <canvas id="canvas" height="300" width="280"></canvas>
+          </div>
+          <button id="predict" type="submit" class="btn-card"><span>Predict <i
+                  class="far fa-arrow-alt-circle-right"></i></span>
+          </button>
+
+        </div>
+      </div>
+      <div class="col s2 m2"></div>
+      <div class="col s4 m4">
+        <div class="card card-prediction">
+          <div class="card-content">
+            <span class="card-title">You Draw:</span>
+            <div class="loader"></div>
+            <h1 id="result"> ?</h1>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="footer">
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+    Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
+</div>
+
+
+<!-- jQuery-->
+<script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<!-- Custom Js -->
+<script src="resources/js/digit-identifier.js"></script>
+
+
+</body>
+
+</html>
