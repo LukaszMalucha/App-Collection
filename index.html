@@ -14,8 +14,6 @@
   <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
-  <!-- Material Icons-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- FontAwesome Styles-->
@@ -24,9 +22,6 @@
   <!-- Custom Styles-->
   <link href="resources/css/custom-styles.css" rel="stylesheet"/>
   <link href="resources/css/navbar.css" rel="stylesheet"/>
-  <!-- jQuery-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 </head>
 
@@ -48,31 +43,26 @@
 
 
 <div id="page-index">
-  <div class="row header">
-    <div id="messageAlert" class="alert alert-message" role="alert">
-
-    </div>
-  </div>
   <div class="dashboard-cards">
     <div class="row row-title">
       <h3>Image Classifiers</h3>
       <p><i class="fab fa-python"></i>&nbsp; Various approaches to image classification problem</p>
     </div>
     <div class="row row-cards">
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/cat_dog.jpg">
           </div>
           <div class="card-content">
             <span class="card-title">Cat vs. Dog Classifier</span>
-            <p>Image classifier CNN trained to distinct between cats and dogs images.</p>
+            <p>Image classifier CNN trained to distinct between cats and dogs.</p>
           </div>
           <a target="_blank" href="http://www.septellar.com/" class="btn btn-card"><span>Continue <i
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/digits.jpg">
@@ -85,7 +75,7 @@
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/bepartisan.png">
@@ -99,12 +89,13 @@
         </div>
       </div>
     </div>
+    <br>
     <div class="row row-title">
       <h3>Artificial Intelligence</h3>
       <p><i class="fab fa-python"></i>&nbsp; Various machine learning & reinforcement learning concepts</p>
     </div>
     <div class="row row-cards">
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/mars.jpg">
@@ -117,7 +108,7 @@
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/sentiment.jpg">
@@ -130,7 +121,7 @@
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/realtor.jpg">
@@ -143,7 +134,7 @@
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/wine.jpg">
@@ -152,17 +143,18 @@
             <span class="card-title">Artificial Sommelier</span>
             <p>Can A.I. accurately predict red wine quality rating?</p>
           </div>
-          <a href="{{ url_for('sommeliers.summary') }}" class="btn btn-card"><span>Continue <i
+          <a target="_blank" href="sommelier.html" class="btn btn-card"><span>Continue <i
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>
     </div>
+    <br>
     <div class="row row-title">
       <h3>Blockchain</h3>
       <p><i class="fab fa-python"></i>&nbsp; Blockchain & cryptocurrency projects</p>
     </div>
     <div class="row row-cards">
-      <div class="col s4 m3">
+      <div class="col s4 m2">
         <div class="card card-menu">
           <div class="card-image">
             <img src="resources/img/main/blockchain.jpg">
@@ -171,7 +163,7 @@
             <span class="card-title">Blockchain Simulation</span>
             <p>Get your head around blockchain basic concepts. Happy mining!</p>
           </div>
-          <a href="https://www.neomvp.com/" class="btn btn-card"><span>Continue <i
+          <a target="_blank" href="blockchain.html" class="btn btn-card"><span>Continue <i
                   class="far fa-arrow-alt-circle-right"></i></span></a>
         </div>
       </div>

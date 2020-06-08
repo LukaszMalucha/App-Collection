@@ -15,6 +15,32 @@ h6 {
 p {
     color: white;
 }
+
+#page-index-summary,
+#page-index-build,
+#page-index-fit,
+#page-index-sommeliers {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    top: 42px;
+}
+
+
+#page-index-build,
+#page-index-fit,
+#page-index-sommeliers {
+  display: none;
+}
+
+.row-cards {
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 /*------------------------------------------------------------------------------
     PROGRESS BAR
 ------------------------------------------------------------------------------*/
@@ -79,15 +105,16 @@ progress::-moz-progress-bar {
     width: 100%;
     margin: auto;
     text-align: left;
-    margin-top: -2%;
+    margin-top: 20px;
 
 }
 
 
 .row-title h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: white;
+    margin:10px 0px;
 }
 
 .row-title p {
@@ -185,6 +212,7 @@ progress::-moz-progress-bar {
 .card-form {
     min-height: 260px;
     width: 100%;
+
 }
 
 .card-sommelier {
@@ -209,58 +237,31 @@ progress::-moz-progress-bar {
 
 .card-sommelier .card-content p{
     color: white;
-    font-size: 0.8rem;
+    font-size: 14px;
 
 }
 
+.rf_message_p {
+  font-size: 16px !important;
+}
 
-#rf-name {
+.vote_message_p {
+  font-size: 18px !important;
+}
+
+.rf_message {
     font-family: 'Playball', cursive;
-    font-size: 1.4rem;
 }
 
-#rf-comment {
-    font-family: 'Playball', cursive;
-    font-size: 1rem;
-}
-
-#rf-result {
-    margin-top: 2%;
-    font-family: 'Playball', cursive;
-    font-size: 1.8rem;
-}
-
-#vot-name {
+.vote_message {
    font-family: 'Just Another Hand', cursive;
-   font-size: 1.6rem;
 }
 
-#vot-comment {
-   font-family: 'Just Another Hand', cursive;
-   font-size: 1.4rem;
+.gradient_message {
+    font-family: 'Merienda One', cursive !important;
 }
 
-#vot-result {
-    margin-top: 2%;
-   font-family: 'Just Another Hand', cursive;
-   font-size: 2rem;
-}
 
-#gtb-name {
-    font-family: 'Merienda One', cursive;
-    font-size: 1.2rem;
-}
-
-#gtb-comment {
-    font-family: 'Merienda One', cursive;
-    font-size: 0.9rem;
-}
-
-#gtb-result {
-    margin-top: 2%;
-    font-family: 'Merienda One', cursive;
-    font-size: 1.6rem;
-}
 
 
 
@@ -302,8 +303,34 @@ progress::-moz-progress-bar {
     background-color: #6ba546;
     font-size: 16px;
     font-family: 'Play', sans-serif;
+    margin-bottom: 60px;
 
 }
+
+.btn-back {
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    border-color: transparent;
+    color: white;
+    background-color: #262a33;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.btn-back i,
+.btn-navigation i{
+  font-size: 16px;
+}
+
+.btn-back:hover, .btn-back:active, .btn-back:focus {
+    background-color: #15181c;
+    color: white;
+}
+
 
 .btn-navigation:hover, .btn-navigation:active, .btn-navigation:focus {
     background-color: #558438;
@@ -409,7 +436,7 @@ input.valid[type="number"]:not(.browser-default),
 input[type="number"]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid #FFCB9A;
     box-shadow: 0 1px 0 0 #FFCB9A;
-
+    color: #ffffff;
 
 }
 
@@ -477,7 +504,7 @@ input[type="number"]:not(.browser-default) {
 }
 
 
-@media(max-width:520px) {
+@media(max-width:600px) {
 
 
 
@@ -495,8 +522,9 @@ input[type="number"]:not(.browser-default) {
         width: 100%;
     }
 
+    .btn-back,
     .btn-navigation {
-        width: 80%;
+        width: 60%;
     }
 
 

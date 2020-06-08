@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blockchain Explained - Blockchain simulation in Python</title>
+  <meta name="Description"
+        content="Blockchain explained on live example. Learn how blockchain works - mining block, building blockchain & add transaction. Download Solidity ICO template.
+                    Great for getting your head around basic concepts of a Technology.">
+  <meta name="KeyWords" content="bitcoin, blockchain, ico, ethereum, block, solidity">
+  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png" alt="septellar-logo"/>
+  <!-- Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  <!-- Custom Styles-->
+  <link href="resources/css/blockchain.css" rel="stylesheet"/>
+  <link href="resources/css/blockchain-navbar.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+<!-- WRAPPER -->
+<!-- TOP NAVBAR -->
+<nav class="navbar navbar-default top-navbar" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="index.html"><span> <i class="fab fa-btc"></i> Blockchain Simulation</span></a>
+  </div>
+  <ul class="nav navbar-top-links navbar-right">
+    <li><a class="nav-link" id="downloadICO"><i class="fab fa-ethereum"></i>Solidity ICO</a></li>
+  </ul>
+</nav>
+
+
+<!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+<div id="page-index">
+  <div class="row header">
+    <div id="messageAlert" class="alert alert-message" role="alert">
+    </div>
+    <div id="messageError" class="alert alert-message" role="alert">
+
+    </div>
+  </div>
+
+  <div class="dashboard-cards">
+    <div class="row row-title">
+      <h3>Build your Blockchain</h3>
+      <p>&nbsp;&nbsp;<i class="fab fa-ethereum"></i> &nbsp; Use one of the functions available below</p>
+    </div>
+    <div class="row row-cards">
+      <div class="col s4 m4 l3 plain-element">
+        <button class="card horizontal card-function blockMining">
+          <div class="col s2 m2 col-icon">
+            <i class="fab fa-ethereum"></i>
+          </div>
+          <div class="col s12 m10 col-text">
+            Mine Block
+          </div>
+        </button>
+        <button class="card horizontal card-function modal-trigger" href="#modalTransaction">
+          <div class="col s2 m2 col-icon">
+            <i class="fab fa-btc"></i>
+          </div>
+          <div class="col s12 m10 col-text">
+            Send Money
+          </div>
+        </button>
+        <button class="card horizontal card-function validationCheck">
+          <div class="col s2 m2 col-icon">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="col s12 m10 col-text">
+            Validation Check
+          </div>
+        </button>
+        <button type="Download" class="card horizontal card-function resetChain">
+          <div class="col s2 m2 col-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <div class="col s12 m10 col-text">
+            Reset Chain
+          </div>
+        </button>
+      </div>
+      <div class="col s8 m4 l3 plain-element">
+        <div class="card card-block genesis-block" id="minedBlock">
+          <div class="card-content">
+            <span class="card-title " id="blockIndex">Genesis Block</span>
+            <table>
+              <tr>
+                <td class="field-label">Proof of Work:</td>
+                <td id="proofOfWork">1</td>
+              </tr>
+              <tr>
+                <td class="field-label">Mined at:</td>
+                <td id="blockDate">2009-01-09</td>
+              </tr>
+              <tr>
+                <td class="field-label">Time:</td>
+                <td id="blockTime">02:54:25.275350</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td class="field-label">Previous Hash:</td>
+                <td id="HashNumber">0e54ebea43306c88ca376779d2fd1862035653be4bdce164821c91986666289f</td>
+              </tr>
+              <tr>
+                <td class="field-label">Transactions:</td>
+              </tr>
+            </table>
+            <div class="row plain-element row-transactions">
+              <p class="transaction" id="transaction1"></p>
+              <p class="transaction" id="transaction2"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-title">
+      <h3>Blockchain State</h3>
+      <p>&nbsp;&nbsp;<i class="fab fa-ethereum"></i> &nbsp; Currently mined blocks with transactions data</p>
+    </div>
+
+    <div class="row row-cards" id="rowBlockchain">
+      <div class="col s12 m3 plain-element">
+        <div class="card card-block">
+          <div class="card-content">
+            <span class="card-title">Genesis Block</span>
+            <table>
+              <tr>
+                <td class="field-label">Proof of Work:</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td class="field-label">Mined at:</td>
+                <td>2009-01-09</td>
+              </tr>
+              <tr>
+                <td class="field-label">Time:</td>
+                <td>02:54:25.275350</td>
+              </tr>
+              <tr>
+                <td class="field-label">Previous Hash:</td>
+                <td id="HashNumber">0</td>
+              </tr>
+              <tr>
+                <td class="field-label">Transactions:</td>
+              </tr>
+            </table>
+            <div class="row plain-element row-transactions">
+              <p class="transaction"></p>
+              <p class="transaction"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalTransaction" class="modal">
+    <form class="col s12" id="formTransaction">
+      <div class="modal-content">
+        <div class="card form-card">
+          <div class="card-content">
+            <span class="card-title">Add Transaction</span>
+            <br><br>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">assignment</i>
+              <input id="sender" name="sender" type="text" maxlength="24" required>
+              <label for="sender">Sender</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">assignment</i>
+              <input id="receiver" name="receiver" type="text" maxlength="24" required>
+              <label for="receiver">Receiver</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">assignment</i>
+              <input id="amount" name="amount" type="number" style="color: white" min="1" required>
+              <label for="amount">Amount</label>
+            </div>
+            <div class="input-field col s12" style="height:25px">
+            </div>
+          </div>
+          <button type="submit" class="btn-card" id="modalClose"><span>Submit <i
+                  class="far fa-arrow-alt-circle-right"></i></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+</div>
+<div class="footer">
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/4a6458c34e915bb7bdfa2d3bcc0bc53e/">Privacy
+    Policy</a> • © 2019 - 2020 www.neomvp.com - All Rights Reserved </p>
+</div>
+
+<!-- jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Custom Js -->
+<script src="resources/js/blockchain.js"></script>
+
+
+</body>
+
+</html>

@@ -68,6 +68,23 @@ new Vue({
       X_test_len: null,
       accuracies_initial: null,
       accuracies_tune: null,
+      fixed_acidity: "",
+      volatile_acidity: "",
+      citric_acid: "",
+      residual_sugar: "",
+      chlorides: "",
+      free_sulfur_dioxide: "",
+      total_sulfur_dioxide: "",
+      density: "",
+      pH: "",
+      sulphates: "",
+      alcohol: "",
+      gradient_message: null,
+      random_forest_message: null,
+      vote_message: null,
+      gtb_predict: null,
+      rf_predict: null,
+      vot_predict: null,
       statistics: ["mean", "std", "min", "25%", "50%", "75%", "max"]
     }
   },
@@ -87,6 +104,11 @@ new Vue({
 
     },
     classifierBuild() {
+          window.scrollTo(0,0);
+          document.getElementById("page-index-summary").style.display = "none";
+          document.getElementById("page-index-build").style.display = "block";
+          document.getElementById("page-index-fit").style.display = "none";
+          document.getElementById("page-index-sommeliers").style.display = "none";
           const url = "http://127.0.0.1:8000/sommeliers/build";
           axios.get(url).then(response => {
             if (response.data) {
@@ -104,6 +126,11 @@ new Vue({
 
     },
     classifierFit() {
+          window.scrollTo(0,0);
+          document.getElementById("page-index-summary").style.display = "none";
+          document.getElementById("page-index-build").style.display = "none";
+          document.getElementById("page-index-fit").style.display = "block";
+          document.getElementById("page-index-sommeliers").style.display = "none";
           const url = "http://127.0.0.1:8000/sommeliers/fit";
           axios.get(url).then(response => {
             if (response.data) {
@@ -113,6 +140,46 @@ new Vue({
             }).catch(error => {
                 window.console.log(error);
               })
+    },
+    sommeliers() {
+        window.scrollTo(0,0);
+        document.getElementById("page-index-summary").style.display = "none";
+        document.getElementById("page-index-build").style.display = "none";
+        document.getElementById("page-index-fit").style.display = "none";
+        document.getElementById("page-index-sommeliers").style.display = "block";
+
+    },
+    rateWine() {
+        let formData = new FormData();
+        formData.append("accuracies_initial", this.accuracies_initial);
+        formData.append("accuracies_tune", this.accuracies_tune);
+        formData.append("fixed_acidity", this.fixed_acidity);
+        formData.append("volatile_acidity", this.volatile_acidity);
+        formData.append("citric_acid", this.citric_acid);
+        formData.append("residual_sugar", this.residual_sugar);
+        formData.append("chlorides", this.chlorides);
+        formData.append("free_sulfur_dioxide", this.free_sulfur_dioxide);
+        formData.append("total_sulfur_dioxide", this.total_sulfur_dioxide);
+        formData.append("density", this.density);
+        formData.append("pH", this.pH);
+        formData.append("sulphates", this.sulphates);
+        formData.append("alcohol", this.alcohol);
+        const url = "http://127.0.0.1:8000/sommeliers/rate";
+        axios.post(url,formData).then(data => {
+          if (data.non_field_errors) {
+              this.error = data.non_field_errors[0]
+          } else if (!data) {
+              window.console.log("Something went wrong. We couldn't proceed with your cash transfer")
+          } else {
+            window.console.log(data.data);
+            this.random_forest_message = data.data.random_forest_message;
+            this.gradient_message = data.data.gradient_message;
+            this.vote_message = data.data.vote_message;
+            this.gtb_predict = data.data.gtb_predict;
+            this.rf_predict = data.data.rf_predict;
+            this.vot_predict = data.data.vot_predict;
+          }
+        })
     },
     fillQualityChart() {
       var dataset = this.counter_dict
@@ -131,7 +198,5 @@ new Vue({
   },
   created () {
       this.processData();
-      this.classifierBuild();
-      this.classifierFit();
   }
 })

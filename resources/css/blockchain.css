@@ -1,0 +1,565 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES
+------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Play', sans-serif;
+    background: #3e4452;
+
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+
+#page-index {
+    width: 100%;
+    display: block;
+    overflow: auto !important;
+    position: relative;
+    top: 42px;
+    background-size: cover;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+    /*font-size: 10px;*/
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    color: white;
+    background-color: #6ba546;
+    border: none;
+    width: 30%;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-enter {
+    background-color: #2d4b65;
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+}
+
+.btn-enter i {
+    font-size: 16px;
+}
+
+.btn-enter:hover,
+.btn-enter:focus,
+.btn-enter:active {
+    background-color: #1f3039;
+    color: white;
+}
+
+.header {
+    position:fixed;
+    width: 100%;
+
+}
+
+a {
+    color: #4267b2
+}
+
+.plain-element {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+
+button {
+    font-family: 'Jura', sans-serif;
+
+}
+
+
+.box {
+   display: flex;
+   align-items:center;
+   margin-bottom: 10px;
+}
+
+.break {
+  width: 5%;
+}
+
+/*------------------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #d8d8d8;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.footer a {
+    color: #d8d8d8;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: #4f84ae;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------
+    BLOCKCHAIN DATA
+------------------------------------------------------------------------------*/
+
+.dashboard-cards {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+
+.row-title {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+
+.row-title h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.row-title p {
+    color: #dadddf;
+    font-size: 12px;
+    margin-left: -4px;
+    letter-spacing: 0.4px
+
+}
+
+.row-cards {
+    width: 80%;
+    text-align: center;
+    padding: 0%;
+
+}
+
+#rowBlockchain {
+  margin-bottom: 60px;
+}
+
+
+/*------------------------------------------------------------------------------
+    CARD FUNCTION
+------------------------------------------------------------------------------*/
+
+
+.card-function {
+    background: #373d49;
+    border-radius: 5px;
+    width: 60%;
+    margin-right: 10%;
+    border: 1px solid #515663;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+.card-function:hover,
+.card-function:active,
+.card-function:focus {
+    color: #FFCB9A;
+    background: #2c313a;
+}
+
+.card-function .col-icon .fab,
+.card-function .col-icon .fas {
+  font-size: 20px;
+}
+
+.card-function .col-icon {
+  color: #FFCB9A;
+  padding-top: 13px;
+
+}
+
+.card-function .col-text {
+  padding-top: 18px;
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-align: center;
+
+}
+
+
+
+
+/*------------------------------------------------------------------------------
+    CARD BLOCK
+------------------------------------------------------------------------------*/
+
+.card-block {
+    background: #373d49;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 0%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #515663;
+    height: 246px;
+}
+
+.genesis-block {
+  margin-left: -20%;
+}
+
+.card-block .card-content {
+    text-align: left;
+    color: #FFCB9A;
+    padding: 6px 4px;
+}
+
+
+.card-block .card-title {
+    color: #FFCB9A;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.card-block table tr{
+    border: none;
+}
+
+.card-block table td {
+     padding: 4px 6px;
+     font-size: 12px;
+     max-width: 50%;
+     word-break: break-all;
+}
+
+
+.card-block .card-title {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 0px !important;
+}
+
+#HashNumber {
+  height: 62px;
+}
+
+.field-label {
+    color: white;
+    font-weight: normal;
+    width: 40%;
+
+}
+
+.row-transactions {
+    height: 34px;
+    overflow: hidden;
+
+}
+
+.transaction {
+  padding-left: 6px;
+}
+
+/*------------------------------------------------------------------------------
+    OTHER
+------------------------------------------------------------------------------*/
+
+
+.modal {
+    width: 20%;
+    background: transparent;
+
+}
+
+.form-card {
+  background: #373d49;
+  color: #FFCB9A;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 0px;
+}
+
+.modal .modal-content {
+    padding: 0px;
+}
+.hash_number {
+    width: 90%;
+    margin-right: 10%;
+    word-wrap: break-word;
+    font-size: 0.75rem;
+    color: #FFCB9A;
+    height: 35px;
+}
+
+.transaction {
+    font-size: 0.8rem;
+}
+
+.alert-message {
+    background: #373d49;
+    color: #FFCB9A;
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 2px;
+
+}
+
+#messageError {
+    color: red;
+}
+
+#targetValue {
+    word-wrap: break-word;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+.btn-card {
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: transparent;
+    text-align: right;
+    color: white;
+    background-color: #262a33;
+    font-size: 18px;
+
+}
+
+.btn-card:hover, .btn-card:active, .btn-card:focus {
+    background-color: #15181c;
+}
+
+
+.btn-blockchain {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.btn-blockchain:hover, .btn-blockchain:focus {
+    background: transparent;
+    color: #FFCB9A;
+    box-shadow: none;
+}
+
+.button-inline {
+    width: 100%;
+    margin-left: 10%;
+    font-size: 0.8rem;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 15px;
+    background-color: black;
+    font-weight: bold;
+}
+
+.button-inline:hover, .button-inline:active, .button-inline:focus {
+    background-color: #558438;
+    color: white;
+}
+
+
+/*------------------------------------------------------------------------------
+    FORMS
+------------------------------------------------------------------------------*/
+
+
+input[type=text] {
+    border-radius: 10px;
+    border-color: #1a2026;
+    background-color: #1a2026;
+    color: white;
+}
+
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #ffcb9a;
+    box-shadow: 0 1px 0 0 #ffcb9a;
+}
+
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
+    color: #ffcb9a;
+}
+
+.input-field .prefix {
+    top: 1rem;
+}
+
+.input-field .prefix.active {
+    color: #ffcb9a !important;
+}
+
+input[type="text"]:not(.browser-default) {
+    height: 4rem;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+
+
+
+@media(max-width:1700px) {
+
+
+
+  .row-title,
+  .row-cards {
+        width: 100%;
+    }
+
+  .modal {
+    width: 30%;
+  }
+
+
+}
+
+@media(max-width:1306px) {
+
+  .card-function {
+    width: 80%;
+  }
+
+  .card-block{
+    width: 96%;
+  }
+
+  .field-label {
+      width: 40%;
+  }
+
+  .genesis-block {
+    margin-left: -10%;
+  }
+
+  .card-block table td {
+    padding: 4px 4px;
+    font-size: 10px;
+  }
+
+
+}
+
+
+@media(max-width:1025px) {
+
+    .dashboard-cards {
+        width: 95%;
+        margin: auto;
+    }
+
+    .card-block {
+        width: 96%;
+    }
+
+    .hash_number {
+        font-size: 0.7rem;
+    }
+
+    .card-function .col-text {
+
+      font-size: 11px;
+    }
+
+
+
+}
+
+
+@media(max-width:600px) {
+
+
+    .card-function {
+        width: 100%;
+    }
+
+    .card-block {
+      width: 98%;
+    }
+
+    .card-function .col-text {
+      font-size: 10px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    .card-function .col-icon {
+      display: none;
+    }
+
+
+
+    .modal {
+        width: 80%;
+    }
+
+      .genesis-block {
+      margin-left: 5%;
+    }
+
+    .row-cards {
+      width: 96%;
+      margin-left: 0%;
+
+    }
+
+}
+
+
+
+
+
+

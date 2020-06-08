@@ -1,0 +1,288 @@
+/*------------------------------------------------------------------------------
+    TOP NAVBAR
+------------------------------------------------------------------------------*/
+
+.navbar {
+	border-radius: 0px;
+}
+
+.navbar-header a {
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 40px;
+	margin-top: 0px;
+	font-weight: 400;
+	display: block;
+	color: #ffffff;
+}
+
+.top-navbar {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 300;
+	border: none;
+	height: 40px;
+	min-height: 40px;
+  padding-left: 14%;
+  padding-right: 15%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+  background: #3e4452;
+  box-shadow: none;
+}
+
+.navbar-brand .material-icons {
+	color: #1a2026;
+}
+
+
+/*------------------------------------------------------------------------------
+    LEFT-SIDE HEADER AREA
+------------------------------------------------------------------------------*/
+
+
+.top-navbar .navbar-brand {
+	margin: 0px;
+	height: 40px;
+	float: left;
+	text-align: left;
+	padding: 0px;
+	font-weight: 500;
+	color: #ffffff;
+	background: transparent;
+	text-transform: uppercase;
+}
+
+.navbar-header {
+	width: 300px;
+	margin-left: 0px;
+	float: left;
+}
+
+.navbar-brand .material-icons,
+.navbar-brand .fab {
+  position: relative;
+	font-size: 24px;
+	margin-right: 5px;
+	top: 3px;
+	padding: 0px 3px 0px 0px;
+	color: #FFCB9A;
+}
+
+.navbar-header:hover,
+.navbar-header:focus {
+	background: transparent;
+	color: #FFCB9A;
+}
+
+
+.navbar-header a:hover {
+	text-decoration: none !important;
+}
+
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	background-color: transparent;
+	outline: 0px;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #FFCB9A;
+}
+
+.navbar-default .navbar-brand:hover .navbar-default .navbar-brand:focus {
+	color: #e5ebef;
+}
+
+
+/*------------------------------------------------------------------------------
+    RIGHT SIDE LINKS
+------------------------------------------------------------------------------*/
+
+
+nav ul a {
+ font-size: 12px;
+ letter-spacing: 0.6px;
+ color: #ffffff;
+text-transform: uppercase;
+}
+
+.nav-link {
+	height: 100% !important;
+	margin: 12px 0px 12px 24px;
+	padding: 0px;
+}
+
+.nav i,
+.nav i.material-icons {
+	height: 14px;
+	font-size: 14px;
+	margin-right: 6px;
+}
+
+
+.img-logo {
+	height: 24px;
+	margin: 7px 8px 6px 0px;
+}
+
+.top-navbar .navbar-right {
+	width: auto;
+	height: 40px;
+	margin: 0px;
+	line-height: 1;
+	padding: 0px;
+	color: #ffffff;
+	float: right !important;
+}
+
+.top-navbar .navbar-right>a {
+	padding: 0px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.top-navbar .navbar-right>a>i {
+	margin-right: 5px;
+	font-size: 16px;
+	height: 40px;
+}
+
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+	text-decoration: none;
+	outline: 0px;
+}
+
+
+nav ul a:hover {
+	background-color: #fff;
+	color: #FFCB9A;
+}
+
+nav ul li:hover,
+nav ul li:active {
+	background: transparent;
+	color: #FFCB9A;
+}
+
+
+.nav>li>a:hover,
+.nav>li>a:focus,
+.nav>li>a:active {
+	background-color: transparent;
+	color: #FFCB9A;
+}
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+	background: transparent;
+	color: #e5ebef;
+}
+
+
+/*------------------------------------------------------------------------------
+    MOBILE MENU
+------------------------------------------------------------------------------*/
+
+
+.sidenav-trigger {
+	height: 40px !important;
+}
+
+.sidenav-trigger i {
+	font-weight: 600;
+}
+
+#trigger {
+	font-size: 24px;
+}
+
+.sidenav li>a>i {
+	margin: 0px !important;
+}
+
+
+.sidenav li:hover {
+	background: transparent;
+}
+
+.sidenav {
+	background: #fff;
+}
+
+.sidenav li>a {
+	color: #3c4146
+}
+
+.sidenav li>a>i {
+	color: #ffffff;
+}
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+@media(max-width:1700px) {
+	.top-navbar {
+		padding-left: 5%;
+		padding-right: 7.5%;
+	}
+	.navbar-header {
+		width: 30%;
+	}
+}
+
+@media(max-width:1400px) {
+	.top-navbar {}
+}
+
+@media(min-width:1026px) {
+
+}
+
+@media(max-width:1025px) {
+	.top-navbar {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+	.nav>li>a {
+		padding-right: 0px;
+	}
+	.navbar-header {
+		width: 50%;
+	}
+
+
+	#search-form {
+		display: none;
+	}
+}
+
+@media(max-width: 601px) {
+	.navbar-header {
+		width: 60%;
+
+	}
+
+	.navbar-header a{
+	  font-size: 10px;
+	}
+
+	nav ul a {
+    font-size: 10px;
+  }
+
+  .nav i, .nav i.material-icons {
+      height: 12px;
+      font-size: 12px;
+      margin-right: 6px;
+      margin-top: 1px;
+  }
+}
+
