@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Search Engine Meta-->
+  <title>Pathfinder AI</title>
+  <meta name="Description"
+        content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
+  <meta name="KeyWords"
+        content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
+  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Custom Styles-->
+  <link href="resources/css/custom-styles.css" rel="stylesheet"/>
+  <link href="resources/css/pathfinder.css" rel="stylesheet"/>
+  <link href="resources/css/navbar.css" rel="stylesheet"/>
+
+
+
+</head>
+
+<body>
+<!-- WRAPPER -->
+
+
+<!-- TOP NAVBAR -->
+<nav class="navbar navbar-default top-navbar" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand company-logo" href="index.html"><img class="company-logo"
+                                                                src="resources/img/logo-white.png"
+                                                                alt="Logo"/></a>
+  </div>
+</nav>
+
+
+<!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+
+<div id="page-index">
+  <div id="app" class="dashboard-cards">
+    <div class="row row-title">
+      <h3>Mission on Mars</h3>
+    </div>
+    <div class="row row-cards">
+      <div class="card card-transparent">
+        <p> Mars Rover has finished assigned task and now is just returning to the Base. On the way
+          back it has to also collect the <b>astronauts</b> and avoid Mars <b>desert storms</b>.
+          <b>Pathfinder</b> is being navigated by simple & efficient <b>Q-Learning Artificial Intelligence</b>
+          algorithm. Planet Mars is being represented by 8x8 grid.
+        </p>
+      </div>
+
+    </div>
+    <div class="row row-cards">
+      <div class="col s5 m5 plain-element">
+      <form @submit.prevent="processData" method="POST">
+          <div class="card card-data">
+            <div class="row">
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_buggy.png"/>
+
+                <input placeholder="Pathfinder Location" v-model="start_location" name="start_location"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_base.png"/>
+                <input placeholder="Base Location" v-model="base_location" name="base_location"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_astronauts.png"/>
+                <input placeholder="Astronauts Location" v-model="astronauts" name="astronauts"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_storm.png"/>
+                <input placeholder="Mars Storm #1" v-model="desert_storm_1" name="desert_storm_1"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_storm.png"/>
+                <input placeholder="Mars Storm #2" v-model="desert_storm_2" name="desert_storm_2"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_storm.png"/>
+                <input placeholder="Mars Storm #3" v-model="desert_storm_3" name="desert_storm_3"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+              <div class="input-field col s12">
+                <img class="img-responsive prefix" src="resources/img/pathfinder/mars_storm.png"/>
+                <input placeholder="Mars Storm #4" v-model="desert_storm_4" name="desert_storm_4"
+                       type="number"
+                       min="0" max="63" class="validate" required>
+              </div>
+            </div>
+            <button type="submit" class="btn-card" id="modalClose"><span>Create Environment <i
+                    class="far fa-arrow-alt-circle-right"></i></span>
+            </button>
+          </div>
+      </form>
+      </div>
+      <div class="col s6 m6 plain-element col-ai">
+        <div class="loader"></div>
+        <img class="img-grid" src="resources/img/pathfinder/grid.png" alt="Planet Grid"/>
+        <div  class="card card-grid">
+          <div  v-if="path" class="row plain-element" id="row-grid">
+            <div v-for="n in 64"  class="col-125 plain-element">
+              <img v-if="(n - 1) == start_location" src="resources/img/pathfinder/mars_buggy.png" class="tile">
+              <img v-else-if="(n - 1) == base_location" src="resources/img/pathfinder/mars_base.png" class="tile">
+              <img v-else-if="(n - 1) == desert_storm_1" src="resources/img/pathfinder/mars_storm.png" class="tile">
+              <img v-else-if="(n - 1) == desert_storm_2" src="resources/img/pathfinder/mars_storm.png" class="tile">
+              <img v-else-if="(n - 1) == desert_storm_3" src="resources/img/pathfinder/mars_storm.png" class="tile">
+              <img v-else-if="(n - 1) == desert_storm_4" src="resources/img/pathfinder/mars_storm.png" class="tile">
+              <img v-else-if="(n - 1) == astronauts" src="resources/img/pathfinder/mars_astronauts.png" class="tile">
+              <img v-else-if="path.includes((n - 1).toString())" src="resources/img/pathfinder/mars_path.png" class="tile">
+              <img v-else src="resources/img/pathfinder/mars_surface.jpg" class="tile">
+            </div>
+
+          </div>
+          <form id="formPathfinder" method="POST">
+            <button type="submit" class="btn btn-algorithm" id="buttonCompute"><span><i class="fas fa-microchip"></i> &nbsp;Compute Path</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="footer">
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+    Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
+</div>
+
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Vue Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- Custom Js -->
+<script src="resources/js/pathfinder.js"></script>
+
+</body>
+
+</html>
