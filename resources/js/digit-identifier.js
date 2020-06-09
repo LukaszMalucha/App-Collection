@@ -1,21 +1,7 @@
-const paintCanvas = document.querySelector( '.js-paint' );
+const paintCanvas = document.querySelector( '#canvas' );
 const context = paintCanvas.getContext( '2d' );
 context.lineCap = 'round';
 
-const colorPicker = document.querySelector( '.js-color-picker');
-
-colorPicker.addEventListener( 'change', event => {
-    context.strokeStyle = event.target.value;
-} );
-
-const lineWidthRange = document.querySelector( '.js-line-range' );
-const lineWidthLabel = document.querySelector( '.js-range-value' );
-
-lineWidthRange.addEventListener( 'input', event => {
-    const width = event.target.value;
-    lineWidthLabel.innerHTML = width;
-    context.lineWidth = width;
-} );
 
 let x = 0, y = 0;
 let isMouseDown = false;
@@ -33,7 +19,8 @@ const drawLine = event => {
         context.moveTo( x, y );
         context.lineTo( newX, newY );
         context.stroke();
-        //[x, y] = [newX, newY];
+        context.strokeStyle = "white";
+        context.lineWidth = 24;
         x = newX;
         y = newY;
     }
@@ -44,6 +31,9 @@ paintCanvas.addEventListener( 'mousemove', drawLine );
 paintCanvas.addEventListener( 'mouseup', stopDrawing );
 paintCanvas.addEventListener( 'mouseout', stopDrawing );
 
+document.getElementById('clear').addEventListener('click', function() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+}, false);
 
 $("#predict").click(function(){
     var canvasObj = document.getElementById("canvas");

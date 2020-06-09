@@ -1,0 +1,401 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES
+------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Play', sans-serif;
+    background-image: url('../img/bipartisan/bipartisan.jpg');
+    background-repeat: no-repeat;
+    background-color: #360532;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+#page-index {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    top: 120px;
+    min-height: 800px;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+#text {
+    color: black;
+}
+
+
+label {
+    margin-left: 30px;
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+}
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+h2 {
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.plain-element {
+    margin:0px !important;
+    padding: 0px !important;
+}
+
+.warning {
+    color: red;
+}
+
+
+.box {
+   display: flex;
+   align-items:center;
+   margin-bottom: 10px;
+}
+
+#error {
+    color: red;
+    display:none;
+}
+
+.modal {
+    width: 25%;
+    height: 550px;
+}
+
+.modal-content {
+    height: 100%;
+}
+
+.modal h5 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.top-navbar {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.row-alert {
+    min-height: 72px;
+}
+
+
+.row-title {
+    width: 100%;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px #140433;
+    text-transform: uppercase;
+}
+
+
+.row-cards {
+    width: 70%;
+    text-align: center;
+}
+
+.row-form {
+    width: 100%;
+
+
+}
+
+.row-prediction {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS
+------------------------------------------------------------------------------*/
+
+.dashboard-cards {
+    width: 80%;
+    margin: auto;
+}
+
+.card-prediction {
+    width: 80%;
+    margin: auto;
+    margin-top: 120px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    display: none;
+}
+
+.card .card-image {
+    width: 30%;
+    margin: auto;
+
+}
+
+.card .card-content {
+    padding: 12px;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #140433;
+    font-weight: bold;
+}
+
+.card-plot {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 600px;
+    width: 50%;
+    margin: auto;
+}
+
+.card-counter {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    width: 50%;
+    margin: auto;
+    margin-left: 35%;
+    color: white;
+    margin-top: 0px;
+    padding-top: 0px;
+    display:none;
+
+}
+
+.card-counter h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 2rem;
+}
+
+.card-text {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    margin: auto;
+    margin-left: 10%;
+    color: white;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    display:none;
+
+}
+
+/*------------------------------------------------------------------------------
+    EDIT & ADD FORMS + TABLE
+------------------------------------------------------------------------------*/
+
+.file-field {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+input[type="text"]:not(.browser-default),
+input.valid[type="text"]:not(.browser-default){
+     border: 0px solid white;
+     height: 2.5rem;
+     box-shadow: 0 1px 0 0 grey;
+     font-family: 'Jura', sans-serif;
+     color: #fff;
+}
+
+
+
+::placeholder {
+    color: #fff;
+}
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+.btn-modal {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  left: 10px;
+}
+
+.btn-modal {
+  font-size: 11px;
+}
+
+.btn-modal i {
+  font-size: 11px;
+}
+
+.btn-modal:hover, .btn-modal:active, .btn-modal:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+}
+
+.btn-submit {
+    width: 20%;
+    height: 2.4rem;
+    border-radius: 5px;
+    border-color: transparent;
+    text-align: center;
+    color: white;
+    background-color: #dd5282;
+    font-size: 1.2rem;
+    font-family: 'Play', sans-serif;
+}
+
+.btn-submit:hover, .btn-submit:active, .btn-submit:focus {
+    background-color: #e12767;
+    color: white;
+}
+
+.btn-file {
+    width: 20%;
+    height: 2.5rem !important;
+    line-height: 2.5rem !important;
+    border-color: transparent;
+    text-align: center;
+    color: white;
+    background-color: #dd5282;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+}
+
+.btn-file:hover, .btn-file:active, .btn-file:focus {
+    background-color: #e12767;
+    color: white;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #d8d8d8;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.footer a {
+    color: #d8d8d8;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: #4f84ae;
+    text-decoration: none;
+}
+
+/*------------------------------------------------------------------------------
+    ANIMATIONS
+------------------------------------------------------------------------------*/
+
+.loader {
+  border: 8px solid #fff;
+  border-top: 8px solid  #e12767;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1.5s linear infinite;
+  margin: auto;
+  margin-top: 5%;
+  display: none;
+
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+
+@media(max-width:1700px) {
+
+    .dashboard-cards,
+    .row-cards {
+      width: 100%;
+    }
+
+}
+
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:992px) {
+
+  .col-chart {
+    display: none;
+  }
+
+}
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:600px) {
+
+    .btn-submit {
+      width: 40%;
+    }
+
+    .row-title {
+      font-size: 1.2rem;
+    }
+
+}
