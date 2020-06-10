@@ -7,14 +7,15 @@ new Vue({
   },
   data () {
     return {
-      start_location: null,
-      base_location: null,
-      astronauts: null,
-      desert_storm_1: null,
-      desert_storm_2: null,
-      desert_storm_3: null,
-      desert_storm_4: null,
+      start_location: "empty",
+      base_location: "empty",
+      astronauts: "empty",
+      desert_storm_1: "empty",
+      desert_storm_2: "empty",
+      desert_storm_3: "empty",
+      desert_storm_4: "empty",
       path: null,
+      error: null,
     }
   },
   methods: {
@@ -35,6 +36,8 @@ new Vue({
             }
             }).catch(error => {
                 window.console.log(error);
+                this.error = "Locations too close. Make sure there is one tile gap between objects.";
+                setTimeout(() => this.error = null, 3000);
               })
 
     },
