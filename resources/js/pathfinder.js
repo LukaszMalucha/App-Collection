@@ -29,7 +29,7 @@ new Vue({
           formData.append("desert_storm_2", this.desert_storm_2);
           formData.append("desert_storm_3", this.desert_storm_3);
           formData.append("desert_storm_4", this.desert_storm_4);
-          const url = "http://54.194.63.163:8000/pathfinder/";
+          const url = "http://3.249.1.158:8000/pathfinder/";
           axios.post(url,formData).then(response => {
             if (response.data) {
                 document.getElementById("loader").style.display = "none";
