@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.blockMining').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'http://3.249.1.158:8000/blockchain/'
+                    url : 'https://52.48.221.27:8000/blockchain/'
         })
         .done(function(data) {
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
     $('.validationCheck').on('click', function(){
         $.ajax({
                     type : 'GET',
-                    url : 'http://3.249.1.158:8000/blockchain/validation-check'
+                    url : 'https://52.48.221.27:8000/blockchain/validation-check'
         })
         .done(function(data) {
             if (data.error) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     $('.resetChain').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'http://3.249.1.158:8000/blockchain/reset'
+                    url : 'https://52.48.221.27:8000/blockchain/reset'
         })
         .done(function(data) {
             if (data.error) {
@@ -167,7 +167,7 @@ $(document).ready(function() {
                 amount : $('#amount').val()
                 },
                 type : 'POST',
-                url : 'http://3.249.1.158:8000/blockchain/transaction'
+                url : 'https://52.48.221.27:8000/blockchain/transaction'
 
         })
 
