@@ -1,6 +1,6 @@
 # Image Classifiers - Various Concepts
 
-#### [Visit the App](https://www.unflasked.com/)
+### [Visit the App](https://www.unflasked.com/)
 
 <br>
 
