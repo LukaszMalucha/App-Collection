@@ -3,362 +3,269 @@
 ------------------------------------------------------------------------------*/
 
 .navbar {
-    border-radius: 0px;
+	border-radius: 0px;
 }
 
-
-.top-navbar .navbar-brand strong {
-    font-size: 13px;
-    font-weight: normal;
-    display: block;
-    color: #1DA1F2;
+.navbar-header a {
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 40px;
+	margin-top: 0px;
+	font-weight: 400;
+	display: block;
+	color: #ffffff;
 }
-
 
 .top-navbar {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 300;
-    border: none;
-    height: 42px;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    min-height: 42px;
-
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 300;
+	border: none;
+	height: 40px;
+	min-height: 40px;
+  padding-left: 15%;
+  padding-right: 15%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+  background: black;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
 }
+
+.navbar-brand .material-icons {
+	color: #1a2026;
+}
+
+
+/*------------------------------------------------------------------------------
+    LEFT-SIDE HEADER AREA
+------------------------------------------------------------------------------*/
+
 
 .top-navbar .navbar-brand {
-    margin: 0px;
-    width: 100%;
-    height: 42px;
-    text-align: left;
-    padding-top: 8px;
-    font-weight: 700;
-    color: #1a2026;
-    background: transparent;
-
+	margin: 0px;
+	height: 40px;
+	float: left;
+	text-align: left;
+	padding: 0px;
+	font-weight: 500;
+	color: #ffffff;
+	background: transparent;
+	text-transform: uppercase;
 }
+
 .navbar-header {
-    width: 30%;
+	width: 200px;
+	margin-left: 0px;
+	float: left;
 }
 
-.navbar-brand .company-logo {
-    height: 2.2rem;
-
+.navbar-brand .material-icons,
+.navbar-brand .fab {
+	float: left;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-top: -3px;
+	letter-spacing: 1px;
+	height: auto;
+	background: #0077b5;
+	padding: 3px 3px 3px 3px;
+	color: #ffffff;
+	font-weight: normal;
 }
 
-.navbar-brand .material-icons, .navbar-brand .fab, .navbar-brand .fas {
-    float: left;
-    font-size: 18px;
-    margin-right: 5px;
-    margin-top: -1px;
-    height: auto;
-    color: #1DA1F2;
-}
-
-.nav > li {
-    height: 100%;
-}
-
-nav ul a {
-    font-size: 13px;
-}
-
-.nav > li > a {
-    padding-top: 0px;
-    padding-bottom: 0px;
-
-}
-
-.nav-link {
-    height: 100% !important;
-    padding: 14px 0px 20px 25px !important;
+.navbar-header:hover,
+.navbar-header:focus {
+	background: transparent;
+	color: #4f88be;
 }
 
 
-.nav i, .nav i.material-icons {
-    height:20px;
-    font-size: 14px;
-    margin-right: 5px;
+.navbar-header a:hover {
+	text-decoration: none !important;
 }
 
-
-.top-navbar .navbar-right {
-    width: auto;
-    height: 100%;
-    margin: 0px;
-    line-height: 1;
-    padding: 0px;
-    color: #1a2026;
-    float: right !important;
-}
-
-.top-navbar .navbar-right>a {
-    padding: 0px;
-    font-size: 13px;
-    font-weight: 650;
-}
-
-.top-navbar .navbar-right>a>i {
-    margin-right: 5px;
-    font-size: 16px;
-    height: 60px;
-}
-
-
-
-.dropdown-content {
-    width: max-content !important;
-    left:  20px !important;
-    top: 42px !important;
-
-}
-
-.dropdown-content li>a {
-    font-size: 13px;
-    text-decoration: none;
-}
-.dropdown-content li>a>i {
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-
-.dropdown-content li>fa {
-    font-size: 16px;
-
-}
-
-
-.sidenav-trigger {
-    height: 40px !important;
-
-
-}
-
-nav a.sidenav-trigger {
-    line-height: 1;
-    display: block;
-    padding: 0px !important;
-    margin: 0px !important;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
-
-nav a.sidenav-trigger i {
-    height: 40px;
-    line-height: 1;
-}
-
-.sidenav-trigger i {
-    font-weight: bold;
-
-}
-
-
-#trigger {
-   position: fixed
-   height:24px;
-   font-size: 24px;
-   padding: 0px;
-}
-
-.sidenav li > a > i {
-    margin: 0px !important;
-}
-
-/* Hovers and Focuses --------------------------------------------------------*/
-
-.navbar-right>a:hover,
-.navbar-right>a:focus {
-    text-decoration: none;
-    outline: 0px;
-}
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    background-color: transparent;
-    outline: 0px;
+	background-color: transparent;
+	outline: 0px;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #4f88be;
+}
+
+.navbar-default .navbar-brand:hover .navbar-default .navbar-brand:focus {
+	color: #e5ebef;
+}
+
+
+/*------------------------------------------------------------------------------
+    RIGHT SIDE LINKS
+------------------------------------------------------------------------------*/
+
+
+nav ul a {
+ font-size: 12px;
+ letter-spacing: 0.6px;
+ color: #ffffff;
+text-transform: uppercase;
+}
+
+.nav-link {
+	height: 100% !important;
+	margin: 12px 0px 12px 24px;
+	padding: 0px;
+}
+
+.nav i,
+.nav i.material-icons {
+	height: 14px;
+	font-size: 14px;
+	margin-right: 6px;
+}
+
+
+.img-logo {
+	height: 32px;
+	margin: 6px 8px 6px 0px;
+}
+
+.top-navbar .navbar-right {
+	width: auto;
+	height: 40px;
+	margin: 0px;
+	line-height: 1;
+	padding: 0px;
+	color: #ffffff;
+	float: right !important;
+}
+
+.top-navbar .navbar-right>a {
+	padding: 0px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+.top-navbar .navbar-right>a>i {
+	margin-right: 5px;
+	font-size: 16px;
+	height: 40px;
+}
+
+
+.navbar-right>a:hover,
+.navbar-right>a:focus {
+	text-decoration: none;
+	outline: 0px;
 }
 
 
 nav ul a:hover {
-    background-color: #fff;
-    color: #003252;
+	background-color: #fff;
+	color: #4f88be;
 }
 
-nav ul li:hover, nav ul li:active {
-    background: transparent;
-
+nav ul li:hover,
+nav ul li:active {
+	background: transparent;
+	color: #4f88be;
 }
 
 
-.sidenav li > a:hover {
-    background: #fff;
-    color: #191919;
+.nav>li>a:hover,
+.nav>li>a:focus,
+.nav>li>a:active {
+	background-color: transparent;
+	color: #4f88be;
 }
-
-/*------------------------------------------------------------------------------
-    Colors
-------------------------------------------------------------------------------*/
-
-.top-navbar {
-    background: #191919;
-    box-shadow: none;
-    border: none;
-}
-
-.navbar-brand .material-icons {
-    color: white;
-}
-
-nav ul a {
-    color: white;
-}
-
-.dropdown-content {
-    background-color: white;
-}
-
-.dropdown-content li>a {
-    color: white;
-    background-color: #191919;
-}
-
-.dropdown-content li>fa {
-    color: #191919;
-}
-
 
 .navbar-right>a:hover,
 .navbar-right>a:focus {
-    background: transparent;
-    color: #e5ebef;
+	background: transparent;
+	color: #e5ebef;
 }
 
-.navbar-default .navbar-brand:hover
-.navbar-default .navbar-brand:focus {
-    color: #e5ebef;
+
+/*------------------------------------------------------------------------------
+    MOBILE MENU
+------------------------------------------------------------------------------*/
+
+
+.sidenav-trigger {
+	height: 40px !important;
 }
 
- nav ul a:hover {
-     color: #191919;
- }
-
-.nav > li > a:hover,
- .nav > li > a:focus,
- .nav > li > a:active{
-    background-color: transparent;
-    color: white;
+.sidenav-trigger i {
+	font-weight: 600;
 }
 
- .navbar-default .navbar-brand:hover {
-    color: #e5ebef;
- }
+#trigger {
+	font-size: 24px;
+}
+
+.sidenav li>a>i {
+	margin: 0px !important;
+}
+
+
+.sidenav li:hover {
+	background: transparent;
+}
 
 .sidenav {
-    background: #191919;
+	background: #fff;
 }
 
-.sidenav li > a {
-    color: white
+.sidenav li>a {
+	color: #3c4146
 }
 
-.sidenav li > a > i {
-    color: inherit;
+.sidenav li>a>i {
+	color: #ffffff;
 }
+
 
 /*------------------------------------------------------------------------------
     MEDIA QUERIES
 ------------------------------------------------------------------------------*/
 
-
-@media(max-width:1700px) {
-    .top-navbar {
-        padding-left: 1%;
-        padding-right: 2%;
-    }
-
-    .navbar-header {
-        width:35%;
-    }
-
+@media(max-width:1720px) {
+	.top-navbar {
+    padding-left: 15%;
+    padding-right: 15%;
+	}
+	.navbar-header {
+		width: 30%;
+	}
 }
 
-@media(min-width:1025px) {
-
-    .sidenav-trigger {
-        display: none !important;
-    }
-
-
+@media(max-width:1210px) {
+	.top-navbar {
+		padding-left: 1%;
+		padding-right: 1%;
+	}
 }
+
+
 @media(max-width:1025px) {
-    .top-navbar {
-        margin: 0px;
-        padding-left: 0%;
-        padding-right: 0%;
-    }
 
-    .top-navbar .navbar-brand {
-        width: 280px;
-        font-size:  2rem;
-        padding: 10px;
-    }
+	.nav>li>a {
+		padding-right: 0px;
+	}
 
-
-    .navbar-brand i.large.material-icons {
-        font-size: 40px;
-    }
-
-
-    .dropdown-content {
-        margin-top: -10px;
-    }
-
-    .nav-link {
-        display: none !important;
-    }
-
-    .navbar-header {
-        width: 70%;
-    }
+	.navbar-header {
+		width: 40%;
+	}
 }
 
-
-@media(max-width:415px) {
-
-    .top-navbar {
-        margin: 0px;
-        padding-left: 1%;
-        padding-right: 1%;
-    }
-
-    .top-navbar .navbar-brand {
-        height: 60px;
-        width: 100%;
-        font-size:  2rem;
-        padding: 10px;
-
-
-    }
-    .navbar-brand i.large.material-icons {
-        font-size:  2rem;
-
-    }
-
-    .top-navbar .navbar-right {
-        position: relative;
-        top: -60px;
-    }
-
-
+@media only screen and (max-width: 601px) {
+	.top-navbar .navbar-brand {}
+	.navbar-header {
+		width: 40%;
+	}
 }
-
-
 

@@ -11,7 +11,7 @@
         content="Python web application hosting various approaches to image classification, machine learning, deep learning, reinforcement learning & blockchain">
   <meta name="KeyWords"
         content="machine learning, blockchain, deep learning, keras, tensorflow, artificial intelligence">
-  <link rel="shortcut icon" type="image/png" href="resources/img/septellar.png"/>
+  <link rel="shortcut icon" type="image/png" href="resources/img/logo-icon.png" alt="septellar logo"/>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
   <!-- Materialize-->
@@ -59,6 +59,7 @@
       </div>
       <div class="row row-error">
         <span v-on="error"> {{error}} </span>
+        <div id="loader" class="loader"></div>
       </div>
 
     </div>
@@ -67,7 +68,7 @@
         <div class="card card-data card-data-left">
           <form @submit.prevent="processData" method="POST">
             <div class="card-title">
-              Choose number
+              Choose Location
             </div>
             <div class="row plain-element">
               <div class="input-field col s12">
@@ -122,7 +123,7 @@
 
       </div>
       <div v-if="!path" class="col s12 m12 l6 plain-element">
-        <div class="loader"></div>
+
         <div class="card card-grid">
           <div class="row plain-element">
             <div v-for="n in 64" class="col-125 plain-element">

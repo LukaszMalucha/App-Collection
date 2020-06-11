@@ -43,7 +43,7 @@ $("#predict").click(function(){
     $('.loader').show();
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:8000/digit-identifier/",
+        url: "http://54.194.63.163:8000/digit-identifier/",
         data: {"image" : img},
         success: function(data){
             $('#result').show();

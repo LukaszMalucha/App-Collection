@@ -32,7 +32,7 @@ $(function() {
         $('.card-counter').hide();
         $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1:8000/bipartisan/',
+            url: 'http://54.194.63.163:8000/bipartisan/',
             data: form_data,
             contentType: false,
             cache: false,

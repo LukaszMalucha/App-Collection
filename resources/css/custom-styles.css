@@ -17,7 +17,6 @@ body {
     overflow: auto;
     position: relative;
     top: 42px;
-    padding-top: 40px;
 }
 
 #page-index a {
@@ -77,6 +76,7 @@ body {
 .dashboard-cards {
     width: 70%;
     margin: auto;
+    margin-top: 40px;
 }
 
 
@@ -200,6 +200,7 @@ body {
 
 .card .card-content {
     padding: 12px 8px;
+    height: 106px;
 }
 
 /*------------------------------------------------------------------------------
@@ -273,65 +274,42 @@ body {
 
     }
 
+
+
+}
+
+@media(max-width:1460px) {
+
+
+
 }
 
 
 @media(max-width:1300px) {
 
     .card-menu .card-content .card-title {
-        font-size: 1.1rem;
+        font-size: 12px;
+        line-height: 16px;
+        height: 32px;
     }
 
     .card-menu .card-content p {
         min-height: 50px;
+        font-size: 10px;
     }
 
 
     .card .card-content {
-        padding: 12px;
+        padding: 8px 4px;
     }
 
 }
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
-@media(max-width:1025px) {
+@media(max-width:994px) {
 
 
-
-    .row-title {
-        width: 100%;
-        font-size: 1.5rem;
-
-    }
-
-    .row-cards {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .row-form {
-        width: 50%;
-    }
-
-    .btn-submit {
-        width: 60%;
-    }
-
-    .fixed-action-btn {
-       right: 50px;
-       bottom: 80px;
-
-    }
-
-    .card-menu {
-        width: 98%;
-    }
-
-    .card-menu .card-content .card-title {
-        font-size: 1.1rem;
-
-    }
 
 }
 
