@@ -43,7 +43,7 @@ $("#predict").click(function(){
     $('.loader').show();
     $.ajax({
         type: "POST",
-        url: "http://3.249.1.158:8000/digit-identifier/",
+        url: "https://compilationapp.herokuapp.com/digit-identifier/",
         data: {"image" : img},
         success: function(data){
             $('#result').show();
