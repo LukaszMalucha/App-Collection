@@ -20,7 +20,7 @@ Application of Google-made image content classifier built with Tensorflow. Train
 
 <br>
 
-![2](https://user-images.githubusercontent.com/26208598/56462833-c49d6c80-63c1-11e9-97d0-5aac4af81aea.JPG)
+![ds](https://user-images.githubusercontent.com/26208598/85521461-3099e700-b5fc-11ea-860b-fa05ddf93605.PNG)
 
 
 <br>
