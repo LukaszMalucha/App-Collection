@@ -30,7 +30,7 @@ Application of Google-made image content classifier built with Tensorflow. Train
 
 Image classifier trained to distinct between cats and dogs images. Convolutional Neural Network was built with Keras & Tensorflow(GPU).
 
-[Kaggle Dataset](https://www.kaggle.com/c/dogs-vs-cats/data)
+![cat](https://user-images.githubusercontent.com/26208598/85835745-7c2fca80-b78d-11ea-8b5e-4ac2921e14c1.PNG)
 
 
 #### CONVOLUTIONAL NEURAL NETWORK CHARACTERISTICS
