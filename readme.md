@@ -59,7 +59,7 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/56584552-dd7d6c00-65d3-11e9-9de9-378c02bac71f.JPG)
+![asd](https://user-images.githubusercontent.com/26208598/85919256-a3f06280-b861-11ea-854d-05deda33e34b.PNG)
 
 
 <br>
