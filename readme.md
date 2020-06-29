@@ -44,10 +44,6 @@ Image classifier trained to distinct between cats and dogs images. Convolutional
 
 <br>
 
-![3](https://user-images.githubusercontent.com/26208598/56462834-c49d6c80-63c1-11e9-9234-6c322ab1fb30.JPG)
-
-
-<br>
 
 
 ### Digit Recognition with Keras & Ajax.js
@@ -72,3 +68,10 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
+### Home Value Estimator - Ireland
+
+<br>
+
+![Capture](https://user-images.githubusercontent.com/26208598/85983263-19357200-b9df-11ea-96f1-1c3f8f8c4ca3.PNG)
+
+<br>
