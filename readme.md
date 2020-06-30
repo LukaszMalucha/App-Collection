@@ -75,3 +75,11 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 ![Capture](https://user-images.githubusercontent.com/26208598/85983263-19357200-b9df-11ea-96f1-1c3f8f8c4ca3.PNG)
 
 <br>
+
+### Artificial Sommelier
+
+<br>
+
+![a](https://user-images.githubusercontent.com/26208598/86100265-836a1780-bab0-11ea-86dc-9bb504916a4f.PNG)
+
+<br>
