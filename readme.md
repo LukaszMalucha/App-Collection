@@ -1,6 +1,6 @@
 # Image Classifiers - Various Concepts
 
-### [Visit the App](https://www.unflasked.com/)
+#### [Visit the App](https://www.unflasked.com/)
 
 <br>
 
@@ -11,7 +11,7 @@
 
 
 
-### Image Content Classification with Tensorflow
+#### Image Content Classification with Tensorflow
 
 Application of Google-made image content classifier built with Tensorflow. Training this kind of model in home conditions would took an eternity, that's why it was downloaded from 
 [official website](https://www.tensorflow.org/tutorials/images/image_recognition). Model accuracy is amazing.
@@ -26,7 +26,7 @@ Application of Google-made image content classifier built with Tensorflow. Train
 <br>
 
 
-### Cat vs Dog Classifier with Keras & SK
+#### Cat vs Dog Classifier with Keras & SK
 
 Image classifier trained to distinct between cats and dogs images. Convolutional Neural Network was built with Keras & Tensorflow(GPU).
 
@@ -46,7 +46,7 @@ Image classifier trained to distinct between cats and dogs images. Convolutional
 
 
 
-### Digit Recognition with Keras & Ajax.js
+#### Digit Recognition with Keras & Ajax.js
 
 Hand-Written Digit Recognition based on MNIST Dataset. Convolutional Neural Network was built with Keras & Tensorflow(GPU). 
 Heroku-hosted web application was built with Flask framework, Ajax & FileSaver. 
@@ -59,7 +59,7 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-### Top 10 Twitter Trends
+#### Top 10 Twitter Trends
 
 <br>
 
@@ -68,7 +68,7 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-### Home Value Estimator - Ireland
+#### Home Value Estimator - Ireland
 
 <br>
 
@@ -76,7 +76,7 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-### Artificial Sommelier
+#### Artificial Sommelier
 
 <br>
 
@@ -84,10 +84,11 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 
 <br>
 
-### Blockchain Simulation
+#### Blockchain Simulation
 
 <br>
 
 ![Capture](https://user-images.githubusercontent.com/26208598/86210190-1320cc00-bb6c-11ea-90e5-fdaeb54535b7.PNG)
 
 <br>
+
