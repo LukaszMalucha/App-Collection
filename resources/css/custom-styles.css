@@ -336,8 +336,9 @@ body {
 
 
     .row-cards {
-        width: 100%;
+        width: 80%;
         margin-bottom: 50px;
+
     }
 
     .row-form {
@@ -348,6 +349,10 @@ body {
        right: 50px;
        bottom: 80px;
 
+    }
+
+    .card-menu {
+        width: 80%;
     }
 
 
