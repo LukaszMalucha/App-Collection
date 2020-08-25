@@ -93,3 +93,9 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 <br>
 
 #### Home Value Estimator
+
+<br>
+
+![1](https://user-images.githubusercontent.com/26208598/91170318-9d9b2d00-e6d0-11ea-8fd4-a4fe5216bc35.PNG)
+
+<br>
