@@ -107,3 +107,10 @@ Heroku-hosted web application was built with Flask framework, Ajax & FileSaver.
 ![1](https://user-images.githubusercontent.com/26208598/92094103-fe5eef80-edcb-11ea-86b3-1ac03797d325.PNG)
 
 <br>
+
+##### PDF Extractor
+
+<br>
+
+![1](https://user-images.githubusercontent.com/26208598/92489347-96ebda00-f1e7-11ea-920f-1f0164788f8d.PNG)
+<br>
