@@ -29,7 +29,7 @@ new Vue({
           formData.append("desert_storm_2", this.desert_storm_2);
           formData.append("desert_storm_3", this.desert_storm_3);
           formData.append("desert_storm_4", this.desert_storm_4);
-          const url = "https://compilationapp.herokuapp.com/pathfinder/";
+          const url = "https://compilationapps.herokuapp.com/pathfinder/";
           axios.post(url,formData).then(response => {
             if (response.data) {
                 document.getElementById("loader").style.display = "none";

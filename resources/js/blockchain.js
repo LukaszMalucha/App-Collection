@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.blockMining').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'https://compilationapp.herokuapp.com/blockchain/'
+                    url : 'https://compilationapps.herokuapp.com/blockchain/'
         })
         .done(function(data) {
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
     $('.validationCheck').on('click', function(){
         $.ajax({
                     type : 'GET',
-                    url : 'https://compilationapp.herokuapp.com/blockchain/validation-check'
+                    url : 'https://compilationapps.herokuapp.com/blockchain/validation-check'
         })
         .done(function(data) {
             if (data.error) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     $('.resetChain').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'https://compilationapp.herokuapp.com/blockchain/reset'
+                    url : 'https://compilationapps.herokuapp.com/blockchain/reset'
         })
         .done(function(data) {
             if (data.error) {
@@ -167,7 +167,7 @@ $(document).ready(function() {
                 amount : $('#amount').val()
                 },
                 type : 'POST',
-                url : 'https://compilationapp.herokuapp.com/blockchain/transaction'
+                url : 'https://compilationapps.herokuapp.com/blockchain/transaction'
 
         })
 
