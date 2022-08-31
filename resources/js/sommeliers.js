@@ -90,7 +90,7 @@ new Vue({
   },
   methods: {
     processData() {
-          const url = "https://compilationapps.herokuapp.com/sommeliers/summary";
+          const url = "https://compilation.mycaprover.toutf.com/sommeliers/summary";
           axios.get(url).then(response => {
             if (response.data) {
                 this.describe = response.data.describe;
@@ -109,7 +109,7 @@ new Vue({
           document.getElementById("page-index-build").style.display = "block";
           document.getElementById("page-index-fit").style.display = "none";
           document.getElementById("page-index-sommeliers").style.display = "none";
-          const url = "https://compilationapps.herokuapp.com/sommeliers/build";
+          const url = "https://compilation.mycaprover.toutf.com/sommeliers/build";
           axios.get(url).then(response => {
             if (response.data) {
                 this.X_head = response.data.X_head;
@@ -131,7 +131,7 @@ new Vue({
           document.getElementById("page-index-build").style.display = "none";
           document.getElementById("page-index-fit").style.display = "block";
           document.getElementById("page-index-sommeliers").style.display = "none";
-          const url = "https://compilationapps.herokuapp.com/sommeliers/fit";
+          const url = "https://compilation.mycaprover.toutf.com/sommeliers/fit";
           axios.get(url).then(response => {
             if (response.data) {
                 this.accuracies_tune = response.data.accuracies_tune;
@@ -164,7 +164,7 @@ new Vue({
         formData.append("pH", this.pH);
         formData.append("sulphates", this.sulphates);
         formData.append("alcohol", this.alcohol);
-        const url = "https://compilationapps.herokuapp.com/sommeliers/rate";
+        const url = "https://compilation.mycaprover.toutf.com/sommeliers/rate";
         axios.post(url,formData).then(data => {
           if (data.non_field_errors) {
               this.error = data.non_field_errors[0]

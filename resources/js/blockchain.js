@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.blockMining').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'https://compilationapps.herokuapp.com/blockchain/'
+                    url : 'https://compilation.mycaprover.toutf.com/blockchain/'
         })
         .done(function(data) {
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
     $('.validationCheck').on('click', function(){
         $.ajax({
                     type : 'GET',
-                    url : 'https://compilationapps.herokuapp.com/blockchain/validation-check'
+                    url : 'https://compilation.mycaprover.toutf.com/blockchain/validation-check'
         })
         .done(function(data) {
             if (data.error) {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     $('.resetChain').on('click', function(){
         $.ajax({
                     type : 'POST',
-                    url : 'https://compilationapps.herokuapp.com/blockchain/reset'
+                    url : 'https://compilation.mycaprover.toutf.com/blockchain/reset'
         })
         .done(function(data) {
             if (data.error) {
@@ -167,7 +167,7 @@ $(document).ready(function() {
                 amount : $('#amount').val()
                 },
                 type : 'POST',
-                url : 'https://compilationapps.herokuapp.com/blockchain/transaction'
+                url : 'https://compilation.mycaprover.toutf.com/blockchain/transaction'
 
         })
 

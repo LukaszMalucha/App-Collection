@@ -43,7 +43,7 @@ $("#predict").click(function(){
     $('.loader').show();
     $.ajax({
         type: "POST",
-        url: "https://compilationapps.herokuapp.com/digit-identifier/",
+        url: "https://compilation.mycaprover.toutf.com/digit-identifier/",
         data: {"image" : img},
         success: function(data){
             $('#result').show();
